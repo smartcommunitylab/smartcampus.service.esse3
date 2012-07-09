@@ -1,0 +1,281 @@
+1;0201B;Giurisprudenza
+2;0202C;Scienze Giuridiche
+3;0203C;Scienze Giuridiche Europee e Transnazionali
+4;0301A;Corso di diploma in Tecnologie industriali dei materiali
+5;0302A;Diploma Universitario in Ingegneria Informatica
+6;0304A;Diploma Universitario in Ingegeria dell'Ambiente e delle Risorse
+7;0305B;Ingegneria Civile
+8;0306B;Ingegneria Forestale
+9;0307B;Ingegneria delle Telecomunicazioni
+10;0308B;Ingegneria dei Materiali
+11;0309B;Ingegneria per l'Ambiente e il Territorio
+12;0410D;Filosofia e linguaggi della modernità
+13;0310C;Ingegneria Civile (triennale)
+14;0501A;Diploma Universitario in Metodologie fisiche
+15;0502B;Fisica
+20;0503B;Matematica
+21;0504B;Informatica
+22;0505C;Fisica (triennale)
+23;0506C;Fisica applicata
+24;0507C;Informatica (triennale)
+25;0508C;Matematica (triennale)
+28;0509D;Fisica
+29;0311C;Ingegneria per l'Ambiente e il Territorio (triennale)
+30;0510D;Informatica
+31;0511D;Matematica
+32;0312C;Ingegneria del Controllo Ambientale
+33;0512D;Fisica e tecnologie biomediche
+34;0313C;Ingegneria Industriale
+35;0602A;Diploma Universitario in Servizio Sociale
+36;0314C;Ingegneria della Produzione Industriale
+37;0603B;Sociologia
+38;0315C;Ingegneria delle Industrie Alimentari
+39;0604C;Sociologia (triennale)
+40;0316C;Ingegneria delle Telecomunicazioni (triennale)
+41;0605C;Società, politica e Istituzioni Europee
+42;0606C;Servizio Sociale
+43;0317C;Ingegneria dell'informazione e dell'organizzazione
+44;0607D;Sociologia e ricerca sociale
+45;0320E;Ingegneria Edile/Architettura
+46;0608D;Metodologia e organizzazione del servizio sociale
+47;0319D;Ingegneria delle Telecomunicazioni
+48;0609D;Lavoro organizzazione e sistemi informativi
+49;0610D;Società, territorio, ambiente
+50;0101A;Diploma Universitario in Statistica
+51;0401B;Lettere
+52;0103B;Economia e Commercio
+53;0402B;Lingue e Letterature Straniere
+54;0104B;Economia Politica
+55;0403C;Filosofia
+56;0404C;Lettere (triennale)
+57;0405C;Lingue e Letterature Moderne (triennale)
+58;0106C;Economia e Diritto
+59;0107C;Economia e gestione Aziendale
+60;0406C;Mediazione Linguistica per le Imprese e il Turismo
+61;0108C;Economia delle Organizzazioni Nonprofit e delle Cooperative Sociali
+62;0109C;Scienze Economiche e Sociali
+63;0407C;Scienze dei Beni Culturali
+64;0408C;Scienze Storiche
+65;0110D;Management e consulenza aziendale
+66;0409B;Lingue e Letterature Straniere Moderne
+67;0111D;Net-Economy. Tecnologia e management dell'informazione e della conoscenza
+68;0701C;Scienze e Tecniche di Psicologia Cognitiva Applicata
+69;0105Z;Biennio comune Economia e Commercio - Economia Politica
+70;0303A;Scuola d.f.s. per Informatica
+71;0601A;Scuola d.f.s. per Assistenti Sociali
+72;0102A;Scuola di Statistica
+9999;CDS_EXT;Corso esterno
+10000;0204D;Giurisprudenza
+10001;0112D;Banca, impresa e mercati finanziari
+10002;0113D;Decisioni economiche, impresa e responsabilità sociale
+10003;0114D;Economia e gestione dell'ambiente e del turismo
+10004;SSIS;Scuola di specializzazione all'insegnamento secondario
+10005;EAM;Economia dell'ambiente e della montagna
+10007;FC;Filologia classica
+10008;FI;Fisica
+10009;ICT;Informatica e telecomunicazioni
+10010;ISO;Information Systems and Organizations
+10011;IA;Ingegneria ambientale
+10012;01ER;Studenti erasmus incoming - Economia
+10013;02ER;Studenti erasmus incoming - Giurisprudenza
+10014;03ER;Studenti erasmus incoming - Ingegneria
+10015;04ER;Studenti erasmus incoming - Lettere e Filosofia
+10016;05ER;Studenti erasmus incoming - Scienze MFN
+10017;06ER;Studenti erasmus incoming - Sociologia
+10018;07ER;Studenti erasmus incoming - Polo di Rovereto
+10019;0321D;Ingegneria per l'Ambiente ed il Territorio (Specialistica)
+10020;0801D;Studi Europei ed Internazionali
+10021;0322D;Ingegneria Civile (Specialistica)
+10022;0323D;Ingegneria dei Materiali (Specialistica)
+10023;0324D;Ingegneria Meccatronica (Specialistica)
+10024;0411D;Filologia e critica letteraria
+10025;0412D;Gestione e conservazione dei beni culturali
+10026;0413D;Lingue e letterature moderne euroamericane
+10027;0702D;Scienze Cognitive
+10028;MESS;Metodologia ed Epistemologia delle Scienze Sociali
+10029;IM;Ingegneria dei Materiali
+10030;MAT;Matematica
+10031;MCCM;Modellazione, conservazione e controllo dei materiali e delle strutture
+10032;NLC;Narratività e Letterature Comparate
+10033;SCF;Scienze della Cognizione e della Formazione
+10034;SM;Scienze della Musica
+10035;0414D;Storia della civiltà europea
+10036;SRS;Sociologia e ricerca sociale
+10037;SGCE;Studi giuridici comparati ed europei
+10038;SI;Studi internazionali
+10039;ST;Studi storici
+10040;CRI;Criminologia
+10041;DP;Diritto penale
+10042;DPRC;Diritto privato comparato
+10043;LF;Libertà fondamentali nel diritto costituzionale e amministrativo comparato e comunitario
+10044;TC;Tecnologie chimiche
+10045;M201;CoDe - Master in Comparative Local Development for the Balkans and other Areas in Transformation
+10046;M101;Master in Politiche di Genere
+10047;0110C;Economia
+10048;0409C;Mediazione linguistica e comunicazione letteraria
+10049;EM;Economics and Management
+10050;FST;Filologia e Storia dei Testi
+10051;IS;Ingegneria delle Strutture : Modellazione,Conservazione e Controllo dei Mat. e delle Strutture
+10052;LCSL;Letterature Comparate e Studi Linguistici
+10053;DOL-01;Corso di studi Didattica on line
+10054;0415D;Scienze linguistiche per le imprese, la comunicazione internazionale e il turismo
+10055;0205F;Giurisprudenza
+10056;0703D;Psicologia
+10057;CBS;Cognitive and Brain Sciences
+10058;M202;Master in Informatore Europeo per le Istituzioni Locali
+10059;M203;Master in Peacebuilding e gestione del conflitto
+10060;M102;Master in Tourism Management - Sviluppo sostenibile, gestione e marketing delle destinazioni turistiche
+10061;M103;Master in e-Procurement - La gestione dei processi di acquisto nella Pubblica Amministrazione
+10062;M204;Master in Nano e microsistemi elettromeccanici (NEMS/MEMS)
+10063;M104;Gestione di imprese sociali (G.I.S.)
+10064;M205;Diritto dello Sport
+10065;M206;Studi avanzati di diritto europeo e transnazionale
+10066;DOT_01;Corso di Dottorato
+10067;M207;Computational and systems biology
+10068;TE01ER;Erasmus incoming Economia
+10071;TE02ER;Erasmus incoming Giurisprudenza
+10077;TE03ER;Erasmus incoming Ingegneria
+10078;TE04ER;Erasmus incoming Lettere e Filosofia
+10079;TE05ER;Erasmus incoming Scienze Matematiche, Fisiche e Naturali
+10080;TE06ER;Erasmus incoming Sociologia
+10081;TE07ER;Erasmus ingresso Scienze Cognitive
+10082;DOC_IN;Dottorati in cotutela incoming
+10083;TEIMD1;Dottorato cotutela incoming - Ingegneria dei Materiali
+10084;TEIAD1;Dottorato cotutela incoming - Ingegneria Ambientale
+10085;TESRSD1;Dottorato cotutela incoming - Sociologia e Ricerca Sociale
+10086;TEICTD1;Dottorato cotutela incoming - Informatica e Telecomunicazioni
+10087;TEFID1;Dottorato cotutela incoming - Fisica
+10088;TESTD1;Dottorato cotutela incoming - Studi Storici
+10089;TESCFD1;Dottorato cotutela incoming - Scienze della Cognizione e della Formazione
+10090;TESGCED1;Dottorato cotutela incoming - Studi Giuridici Comparati ed Europei
+10091;TEISD1;"Dottorato cotutela incoming - Ingegneria delle Strutture: Modellazione. Conservazione e controllo dei Materiali e delle Strutture
+10092;TESGCE;Dottorato cotutela incoming - Studi Giuridici Comparati ed Europei
+10093;CS ;Corsi singoli
+10094;CS_2;Corsi singoli
+10095;CS_CON;Corsi singoli in convenzione
+10096;M208;Analisi e Gestione di Sistemi Geotecnici - SIGEO
+10097;M209;Tecnologie dell'E-government
+10098;SPF;Scienze Psicologiche e della Formazione
+10099;SLLF;Studi Letterari, Linguistici e Filologici
+10100;M210;Human Language Technology and Interfaces
+10101;ISS;Ingegneria dei Sistemi Strutturali Civili e Meccanici
+10102;TE_SPEF_D1;Dottorati in cotutela incoming - Scienze Psicologiche e della Formazione
+10103;TU07ER;Erasmus Outgoing Scienze Cognitive
+10104;TU01ER;Erasmus Outgoing Economia
+10105;TU02ER;Erasmus Outgoing Giurisprudenza
+10106;TU03ER;Erasmus Outgoing Ingegneria
+10107;TU04ER;Erasmus Outgoing Lettere e Filosofia
+10108;TU05ER;Erasmus Outgoing Scienze Matematiche, Fisiche e
+10109;TU06ER;Erasmus Outgoing Sociologia
+10110;M211;Metodologia della ricerca in educazione
+10111;M212;Integrated Design for Energy Efficiency - IDEE
+10112;0704G;Interfacce e Tecnologie della Comunicazione
+10113;0513G;Fisica
+10114;0514G;Informatica
+10115;0515G;Matematica
+10116;0516G;Scienze e Tecnologie Biomolecolari
+10117;0517H;INFORMATICA
+10120;0802H;Studi Europei e Internazionali
+10123;0705G;Scienze e Tecniche di Psicologia Cognitiva
+10124;0707H;Psicologia
+10125;0706H;Ergonomia e Scienze Cognitive
+10126;0115G;Amministrazione Aziendale e Diritto
+10127;0325G;Ingegneria Civile
+10128;0116G;Gestione Aziendale
+10129;0117G;Economia e Management
+10130;0326G;Ingegneria per l'ambiente e il territorio
+10131;0327G;Ingegneria Industriale
+10132;0328G;Ingegneria delle Industrie Alimentari
+10133;0329G;Ingegneria Elettronica e delle Telecomunicazioni
+10134;0330G;Ingegneria dell'informazione e Organizzazione D'impresa
+10135;0118H;Management e consulenza aziendale
+10136;0119H;International Management - Management Internazionale
+10137;0611G;Sociologia
+10138;0612G;Studi internazionali
+10139;0613G;Servizio Sociale
+10140;0614H;Sociologia e Ricerca Sociale
+10141;0615H;Società, Territorio e Ambiente
+10142;0616H;Lavoro, Organizzazione e Sistemi Informativi
+10143;0617H;Metodologia e Organizzazione del Servizio Sociale
+10144;TU08ER;NUOVA FACOLTà
+10145;STUM;Studi Umanistici, discipline filosofiche, storiche e dei beni culturali
+10146;M214;Diritto e Management delle Amministrazioni Pubbliche
+10147;LDGD;Local Development and Global Dynamics
+10148;M105;Tecnologie dell'E-government
+10149;0331H;Ingegneria Civile
+10150;0332H;Ingegneria per l'ambiente e il territorio
+10151;0333H;Ingegneria Meccatronica
+10152;0334H;Ingegneria dei materiali
+10153;0335H;Ingegneria delle telecomunicazioni
+10155;0416G;Filosofia
+10156;0417G;Beni culturali
+10157;0418G;Lingue moderne
+10158;0419G;Studi storici e filologico-letterari
+10159;0421H;Conservazione e gestione dei Beni culturali
+10160;0425H;Scienze storiche e forme della memoria
+10164;0422H;Letterature euroamericane, traduzione e critica letteraria
+10165;0423H;Mediazione linguistica, turismo e culture
+10166;0424H;Filologia e critica letteraria
+10167;0420H;Filosofia e linguaggi della modernità
+10168;0708H;Cognitive Science - Scienze Cognitive
+10169;0518H;FISICA
+10170;0519H;MATEMATICA
+10171;SB;Scienze Biomolecolari
+10172;SSPL;Scuola di Specializzazione per le professioni legali
+10173;M215;Nano Micro
+10174;M106;Metodologie di Intervento Educativo in Contesti Specifici e Territoriali
+10175;0336F;Ingegneria Edile-Architettura
+10176;0120H;Innovation Management - Management dell'innovazione
+10177;0803H;EUROPEAN AND INTERNATIONAL STUDIES - STUDI EUROPEI E INTERNAZIONALI 
+10178;0121H;Economics - Economia
+10179;0122H;Finanza
+10180;TESBD1;Dottorato cotutela incoming - Local Development and Global Dynamics
+10181;M107;Joint African Master Programme in Comparative Local Development - JAMP
+10182;TESGD1;Dottorato in cotuttela incoming - Studi Giuridici Comparati ed Europei
+10183;TE08ER;Erasmus incoming Scuola Studi Internazionali
+10184;XXXXX;Corso errato SEI
+10185;0123H;Management
+10186;0124H;Management
+10187;0125H;Economia e legislazione d'impresa
+10188;SSS;SCUOLA IN SCIENZE SOCIALI
+10189;SU;Studi Umanistici
+10190;AB_HITO;Accordo bilaterale con Hitotsubashi University
+10191;AB_CARL;Exchange Agreement with Carleton University
+10192;AB_UNIVALI;Exchange Agreement with Universidade do Vale do Itajaì
+10193;AB_FURB;Exchange Agreement with FURB - Universidade Regional de Blumenau
+10194;AB_MELBOUR;Exchange Agreement with University of Melbourne
+10195;AB_SHANGAI; Exchange Agreement with Shangai International Studies University
+10196;EM_MULTIC;Erasmus Mundus - MULTIC - Lot 5
+10197;EM_AVERR;Erasmus Mundus - AVERROES 3 - Lot 1
+10198;EM_ASIAREG;Erasmus Mundus - Asia Regional - Lot 11
+10199;EM_LOT3B;Erasmus Mundus - Lot 3B
+10200;TE_STUM_D1;Dottorati in cotutela incoming - Studi Umanistici
+10201;TE_STU_D1;Dottorati cotutela incoming - STUDI UMANISTICI
+10202;TE_IAS_D1;DOTTORATI IN COTUTELA INCOMING INGEGNERIA AMBIENTALE SMART
+10203;EMSSS;Economics and Management (Scuola in Scienze Sociali)
+10204;SRSSSS;Sociologia e Ricerca Sociale (Scuola in Scienze Sociali)
+10205;LDGDSSS;Local Development and Global Dynamics (Scuola in Scienze Sociali)
+10206;CP01;Formazione per formatori eLearning
+10207;M108;Joint European Master in Comparative Local Development - CoDe
+10208;TE_SUDF_D1;Dottorato in cotutela incoming STUDI UMANISTICI, DISCIPLINE FILOSOFICHE, STORICHE E DEI BENI CULTURALI
+10209;DL_07_TILB;DOPPIA LAUREA SOCIOLOGIA TILBURG
+10210;M216;Gestione delle Politiche Familiari
+10213;CP03;Formazione per docenti tutor nella scuola primaria e secondaria
+10214;TFA546;A546 Lingue e civiltà straniere – Tedesco
+10216;TFA049;A049 Matematica e fisica
+10217;TFA050;A050 Materie letterarie negli istituti di istruzione secondaria di II grado
+10218;TFA051;A051 Materie letterarie e latino nei licei e nell’istituto magistrale
+10219;TFA052;A052 Materie Letterarie, latino e greco nei licei classici
+10220;TFA059;A059 Matematica e scienze nella scuola secondaria di I grado
+10221;TFA060;A060 Scienze naturali, chimica e geografia, microbiologia
+10223;TFA047;A047 Matematica
+10224;TFA013;A013 Chimica e tecnologie chimiche
+10225;TFA036;A036 Filosofia, psicologia e scienze dell’educazione
+10226;TFA037;A037 Filosofia e storia
+10227;TFA038;A038 Fisica
+10228;TFA043;A043 Italiano, storia e geografia nella scuola secondaria di I grado
+10229;TFA345;A345 Lingua straniera – Inglese
+10230;TFA545;A545 Lingua straniera – Tedesco
+10231;TFA346;A346 Lingue e civiltà straniere – Inglese
+10232;0520H;BIOTECNOLOGIE CELLULARI E MOLECOLARI
+10233;0426H;Scienze storiche

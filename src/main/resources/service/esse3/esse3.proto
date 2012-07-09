@@ -1,0 +1,55 @@
+package smartcampus.service.esse3.data.message;
+
+import "core.proto";
+
+message Student {
+	required string fiscalCode = 1;
+	required string name = 2;
+	required string surname = 3;
+	required string enrollmentYear = 4;
+	required string nation = 5;
+	required string academicYear = 6;
+	required string supplementaryYears = 7;
+	required string cfu = 8;
+	required string cfuTotal = 9;
+	required string marksNumber = 10;
+	required string marksAverage = 11;
+}
+
+message Exam {
+	required string id = 1;
+	required string cod = 2;
+	required string name = 3;
+	required string result = 4;
+	required bool lode = 5;
+	required string weight = 6;
+	required int64 date = 7;
+//	optional string description = 8;
+}
+
+message StudentExams {
+	required string fiscalCode = 1;
+	repeated Exam exams = 2;
+}
+
+message AdLog {
+	required string cod = 1;
+	required string logId = 2;
+	required string year = 3;
+}
+
+message ExamDescription {
+	optional string description = 3;
+}
+
+message ExamTeacher {
+	optional string name = 3;
+	optional string surname = 4;
+}
+
+message CompleteExam {
+	required string cod = 1;
+	required string aaOff = 2;
+	required ExamDescription description = 3;
+	required ExamTeacher teacher = 4;
+}
