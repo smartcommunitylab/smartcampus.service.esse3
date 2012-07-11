@@ -193,6 +193,23 @@ public class Esse3WSScript {
 		student.setSurname((String) expr1.evaluate(doc, XPathConstants.STRING));
 		expr1 = xpath.compile("//NAZIONE_RESI_DES/DESCRIZIONE[@codice_lingua='eng']");
 		student.setNation((String) expr1.evaluate(doc, XPathConstants.STRING));
+		expr1 = xpath.compile("//SESSO");
+		student.setGender((String) expr1.evaluate(doc, XPathConstants.STRING));
+		expr1 = xpath.compile("//DATA_NASCITA");
+		student.setDateOfBirth((String) expr1.evaluate(doc, XPathConstants.STRING));
+		expr1 = xpath.compile("//TEL_DOM");
+		student.setPhone((String) expr1.evaluate(doc, XPathConstants.STRING));
+		expr1 = xpath.compile("//CELLULARE");
+		student.setMobile((String) expr1.evaluate(doc, XPathConstants.STRING));
+		
+		expr1 = xpath.compile("//IND_RESI");
+		String street = (String)expr1.evaluate(doc, XPathConstants.STRING);
+		expr1 = xpath.compile("//NUM_CIV_RESI");
+		String streetN = (String)expr1.evaluate(doc, XPathConstants.STRING);
+		expr1 = xpath.compile("//COMUNE_RESI_DES");
+		String town = (String)expr1.evaluate(doc, XPathConstants.STRING);
+		String address = street + " " + streetN + ", " + town;
+		student.setAddress(address);		
 		
 		expr1 = xpath.compile("//CARRIERE/CARRIERA[1]");
 		Node carriera = (Node) expr1.evaluate(doc, XPathConstants.NODE);
