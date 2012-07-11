@@ -228,6 +228,9 @@ public class Esse3WSScript {
 		student.setMarksNumber((String) expr2.evaluate(carriera, XPathConstants.STRING));
 		expr2 = xpath.compile("MEDIA");
 		student.setMarksAverage((String) expr2.evaluate(carriera, XPathConstants.STRING));
+		
+		expr2 = xpath.compile("CDS_DES/DESCRIZIONE[@codice_lingua='eng']");
+		student.setCds((String) expr2.evaluate(carriera, XPathConstants.STRING));
 
 		return student.build();
 	}
@@ -272,7 +275,7 @@ public class Esse3WSScript {
 				builder.setResult(giudizio);
 			}
 			
-			expr1 = xpath.compile("DES_AD/DESCRIZIONE[@codice_lingua='ita']");
+			expr1 = xpath.compile("DES_AD/DESCRIZIONE[@codice_lingua='eng']");
 			builder.setName((String) expr1.evaluate(result1.item(i), XPathConstants.STRING));			
 			
 			result.add(builder.build());

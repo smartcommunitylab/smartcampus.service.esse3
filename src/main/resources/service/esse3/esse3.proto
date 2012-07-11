@@ -19,6 +19,7 @@ message Student {
 	required string phone = 14;
 	required string mobile = 15;
 	required string address = 16;
+	required string cds = 17;
 }
 
 message Exam {
