@@ -4,10 +4,17 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.StringReader;
+import java.io.StringWriter;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import javax.xml.transform.stream.StreamSource;
 import javax.xml.xpath.XPath;
@@ -33,33 +40,42 @@ public class WebServiceClient {
 //		this.message = message;
 //	}
 	
-	public String fn_dologin(String username, String password) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException {
+	public String fn_dologin(String username, String password) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, TransformerException {
 		String loginMsg = "<fn_dologin><username>" + username + "</username><password>" + password + "</password></fn_dologin>";
 		return serviceResult(loginMsg, "//fn_dologinResponse");
 	}
 	
-	public String fn_retrieve_xml(String sid, String cmd, String pars) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException {
+	public String fn_retrieve_xml(String sid, String cmd, String pars) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, TransformerException {
 		String cdsMsg = "<fn_retrieve_xml><sid>" + sid +"</sid><retrieve>" + cmd + "</retrieve><params>" + pars + "</params></fn_retrieve_xml>";
 		return serviceResult(cdsMsg, "//xml");
 	}
 	
-	public void fn_dologout(String sid) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException {
+	public void fn_dologout(String sid) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, TransformerException {
 		String cdsMsg = "<fn_dologout><sid>" + sid +"</sid></fn_dologout>";
 		serviceResult(cdsMsg, null);
 	}
 	
 
-	public String serviceResult(String msg, String xp) throws ParserConfigurationException, SAXException, IOException, XPathExpressionException {
+	public String serviceResult(String msg, String xp) throws ParserConfigurationException, SAXException, IOException, XPathExpressionException, TransformerException {
 		StreamSource source = new StreamSource(new StringReader(msg));
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		StreamResult result = new StreamResult(baos);
 		webServiceTemplate.sendSourceAndReceiveToResult(source, result);
+		
 
 		ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
 
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		DocumentBuilder builder = factory.newDocumentBuilder();
 		Document doc = builder.parse(bais);
+		
+		TransformerFactory transFactory = TransformerFactory.newInstance();
+		Transformer transformer = transFactory.newTransformer();
+		StringWriter buffer = new StringWriter();
+		transformer.setOutputProperty(OutputKeys.OMIT_XML_DECLARATION, "yes");
+		transformer.transform(new DOMSource(doc), new StreamResult(buffer));
+		String str = buffer.toString();
+		
 
 		if (xp != null) {
 		XPathFactory xPathfactory = XPathFactory.newInstance();

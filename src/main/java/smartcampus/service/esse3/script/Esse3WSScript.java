@@ -1,5 +1,7 @@
 package smartcampus.service.esse3.script;
 
+import it.sayservice.platform.core.bus.common.exception.TransformerException;
+
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.text.ParseException;
@@ -54,6 +56,9 @@ public class Esse3WSScript {
 	
 	public static Student getStudent(String fiscalCode) throws Exception {
 		String sid = login();
+		if (sid == null || sid.length() == 0) {
+			throw new TransformerException("Login returned an empty sid");
+		}
 		String par = String.format("COD_FISCALE=%s;ISO6392_COD=ita;SESSIONID=%s", fiscalCode, sid);
 
 		String res = proxy.fn_retrieve_xml(sid, "GET_CURRICULUM", par);
@@ -67,6 +72,9 @@ public class Esse3WSScript {
 
 	public static StudentExams getExams(String fiscalCode) throws Exception {
 		String sid = login();
+		if (sid == null || sid.length() == 0) {
+			throw new TransformerException("Login returned an empty sid");
+		}
 		String par = String.format("COD_FISCALE=%s;ISO6392_COD=ita;SESSIONID=%s", fiscalCode, sid);
 
 		String res = proxy.fn_retrieve_xml(sid, "GET_CURRICULUM", par);
@@ -84,6 +92,9 @@ public class Esse3WSScript {
 
 	public static List<AdLog> getAdLogs(String aaOff) throws Exception {
 		String sid = login();
+		if (sid == null || sid.length() == 0) {
+			throw new TransformerException("Login returned an empty sid");
+		}
 		String par = String.format("aa_off_id=%s", aaOff);
 		String res = proxy.fn_retrieve_xml(sid, "LISTA_AD_FISICHE", par);
 
@@ -95,19 +106,21 @@ public class Esse3WSScript {
 	}
 
 	public static ExamDescription getExamDescription(String cod, String aaOff, List<AdLog> logs) throws Exception {
-
+		String sid = login();
+		if (sid == null || sid.length() == 0) {
+			throw new TransformerException("Login returned an empty sid");
+		}
+		
 		ExamDescription description = null;
 		for (AdLog log : logs) {
 			if (log.getCod().equals(cod) && log.getYear().equals(aaOff)) {
 
-				String sid = login();
 				String par = String.format("aa_off_id=%s;ad_log_id=%s", aaOff, log.getLogId());
 				String res = proxy.fn_retrieve_xml(sid, "CONTENUTI_AD_PDSORD", par);
 
 				// description = buildExamDescription(res.value, cod, aaOff);
 				description = buildExamDescriptionXML(res, cod, aaOff);
 
-				logout(sid);
 				break;
 			}
 		}
@@ -116,23 +129,27 @@ public class Esse3WSScript {
 			ExamDescription.Builder builder = ExamDescription.newBuilder();
 			description = builder.build();
 		}
+		
+		logout(sid);
 		return description;
 
 	}
 
 	public static ExamTeacher getExamTeacher(String cod, String aaOff, List<AdLog> logs) throws Exception {
-
+		String sid = login();
+		if (sid == null || sid.length() == 0) {
+			throw new TransformerException("Login returned an empty sid");
+		}
+		
 		ExamTeacher teacher = null;
 		for (AdLog log : logs) {
 			if (log.getCod().equals(cod) && log.getYear().equals(aaOff)) {
 
-				String sid = login();
 				String par = String.format("ad_log_id=%s", log.getLogId());
 				String res = proxy.fn_retrieve_xml(sid, "LISTA_DOCENTI_AD", par);
 
 				teacher = buildExamTeacherXML(res, cod, aaOff);
 
-				logout(sid);
 				break;
 			}
 		}
@@ -141,6 +158,8 @@ public class Esse3WSScript {
 			ExamTeacher.Builder builder = ExamTeacher.newBuilder();
 			teacher = builder.build();
 		}
+		
+		logout(sid);
 		return teacher;
 
 	}
@@ -163,7 +182,8 @@ public class Esse3WSScript {
 	private static String login() throws Exception {
 		try {
 			init();
-			String sid = proxy.fn_dologin("wsesse3client", "wesse3K1");
+			String sid = proxy.fn_dologin("wsesse3clientX", "wesse3K1");
+//			System.out.println("SID = " + sid);
 			return sid;
 		} catch (Exception e) {
 			log.error("Cannot connect to esse3.");
@@ -171,11 +191,11 @@ public class Esse3WSScript {
 		}
 	}
 
-	private static void logout(String sid) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException {
+	private static void logout(String sid) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, javax.xml.transform.TransformerException {
 		proxy.fn_dologout(sid);
 	}
 
-	private static Student buildStudentXML(String res) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException {
+	private static Student buildStudentXML(String res) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, TransformerException {
 		Student.Builder student = Student.newBuilder();
 
 		DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();
@@ -186,7 +206,12 @@ public class Esse3WSScript {
 		XPath xpath = factory.newXPath();
 
 		XPathExpression expr1 = xpath.compile("//COD_FISCALE");
-		student.setFiscalCode((String) expr1.evaluate(doc, XPathConstants.STRING));
+		String fiscalCode = (String) expr1.evaluate(doc, XPathConstants.STRING);
+		if (fiscalCode == null || fiscalCode.length() == 0) {
+			throw new TransformerException("Missing fiscal code in student data.");
+		}
+		
+		student.setFiscalCode(fiscalCode);
 		expr1 = xpath.compile("//NOME");
 		student.setName((String) expr1.evaluate(doc, XPathConstants.STRING));
 		expr1 = xpath.compile("//COGNOME");
@@ -235,7 +260,7 @@ public class Esse3WSScript {
 		return student.build();
 	}
 
-	private static List<Exam> buildExamsXML(String res) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, ParseException {
+	private static List<Exam> buildExamsXML(String res) throws XPathExpressionException, ParserConfigurationException, SAXException, IOException, ParseException, TransformerException {
 		List<Exam> result = new ArrayList<Exam>();
 
 		DocumentBuilderFactory domFactory = DocumentBuilderFactory.newInstance();
@@ -244,6 +269,12 @@ public class Esse3WSScript {
 		Document doc = docBuilder.parse(new ByteArrayInputStream(res.getBytes()));
 		XPathFactory factory = XPathFactory.newInstance();
 		XPath xpath = factory.newXPath();
+		
+		XPathExpression expr0 = xpath.compile("//COD_FISCALE");
+		String fiscalCode = (String) expr0.evaluate(doc, XPathConstants.STRING);
+		if (fiscalCode == null || fiscalCode.length() == 0) {
+			throw new TransformerException("Missing fiscal code in student data.");
+		}		
 
 		XPathExpression expr1 = xpath.compile("//CARRIERE/CARRIERA[1]/ESAMI/ESAME");
 		NodeList result1 = (NodeList) expr1.evaluate(doc, XPathConstants.NODESET);
