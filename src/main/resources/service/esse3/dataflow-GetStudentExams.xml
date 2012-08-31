@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataflow xmlns="http://www.example.org/mml-schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/mml-schema mml-schema.xsd ">
 
-	<input name="fiscalCode" type="String"/>
+	<input name="idAda" type="String"/>
+
+	<variable name="studentExams" type="String" />
+
+	<httpConnector name="adaConnector" method="GET" encoding="ISO-8859-1"/>
+
+	<connect name="c1" connector="adaConnector" outputVar="studentExams" transformer="string">
+		<properties>
+			<property name="url">
+				<value>"http://localhost:8080/smartcampus.vas.portfolio.ada/rest/esami/" + idAda</value>
+			</property>
+		</properties>
+	</connect>
 
 	<script outputVar="output">
-		<className>smartcampus.service.esse3.script.Esse3WSScript</className>
+		<className>smartcampus.service.esse3.script.ADAConnectionScript</className>
 		<method>getExams</method>
 		<variables>
-			<value>fiscalCode</value>
+			<value>studentExams</value>
+			<value>idAda</value>
 		</variables>
 	</script>
 

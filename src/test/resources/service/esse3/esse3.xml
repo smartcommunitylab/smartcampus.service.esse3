@@ -38,10 +38,13 @@
 		<entry key="dataFlowInvokable">
 			<value type="java.lang.Boolean">true</value>
 		</entry>
+		<entry key="runnableAfterDelay">
+			<value type="java.lang.Boolean">true</value>
+		</entry>		
 	</util:map>
 
 	<util:map id="studentParams" map-class="java.util.HashMap">
-			<entry key="fiscalCode">
+			<entry key="idAda">
 			<value type="java.lang.String"></value>
 		</entry>
 	</util:map>
@@ -75,6 +78,13 @@
 		</constructor-arg>
 		<constructor-arg>
 			<map>
+				<entry key="GetStudentData">
+					<ref bean="defaultConf"/>
+				</entry>
+				<entry key="GetStudentExams">
+					<ref bean="defaultConf"/>
+				</entry>
+				<!-- 			
 				<entry key="GetAdLogs">
 					<ref bean="defaultConf"/>
 				</entry>
@@ -84,19 +94,25 @@
 				<entry key="GetExamTeacher">
 					<ref bean="defaultConf"/>
 				</entry>				
-				<entry key="GetStudentData">
-					<ref bean="defaultConf"/>
-				</entry>
-				<entry key="GetStudentExams">
-					<ref bean="defaultConf"/>
-				</entry>
 				<entry key="GetCompleteExam">
 					<ref bean="defaultConf"/>
-				</entry>				
+				</entry>
+				 -->				
 			</map>
 		</constructor-arg>
 		<constructor-arg>
 			<map>
+				<entry key="GetStudentData">
+					<util:list>
+						<ref bean="studentParams"/>
+					</util:list>
+				</entry>
+				<entry key="GetStudentExams">
+					<util:list>
+						<ref bean="studentParams"/>
+					</util:list>
+				</entry>
+				<!-- 
 				<entry key="GetAdLogs">
 					<util:list>
 						<ref bean="logsParams"/>
@@ -111,22 +127,13 @@
 					<util:list>
 						<ref bean="examDescriptionParams"/>
 					</util:list>
-				</entry>				
-				<entry key="GetStudentData">
-					<util:list>
-						<ref bean="studentParams"/>
-					</util:list>
-				</entry>
-				<entry key="GetStudentExams">
-					<util:list>
-						<ref bean="studentParams"/>
-					</util:list>
-				</entry>			
+				</entry>										
 				<entry key="GetCompleteExam">
 					<util:list>
 						<ref bean="examDescriptionParams"/>
 					</util:list>
-				</entry>															
+				</entry>		
+				 -->													
 			</map>
 		</constructor-arg>
 		<constructor-arg ref="dataStores"/>

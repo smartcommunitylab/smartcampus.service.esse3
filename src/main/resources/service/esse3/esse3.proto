@@ -20,6 +20,7 @@ message Student {
 	required string mobile = 15;
 	required string address = 16;
 	required string cds = 17;
+	required string idAda = 18;
 }
 
 message Exam {
@@ -34,8 +35,9 @@ message Exam {
 }
 
 message StudentExams {
-	required string fiscalCode = 1;
+	required string idAda = 1;
 	repeated Exam exams = 2;
+	repeated Exam todo = 3;
 }
 
 message AdLog {

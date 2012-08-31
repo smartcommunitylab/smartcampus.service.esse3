@@ -106,6 +106,62 @@ public class Esse3ProtoBean {
       this.marksAverage = marksAverage;
     }
     
+          private String gender;
+    public String getGender() {
+      return gender;
+    }
+    public void setGender(String gender) {
+      this.gender = gender;
+    }
+    
+          private String dateOfBirth;
+    public String getDateOfBirth() {
+      return dateOfBirth;
+    }
+    public void setDateOfBirth(String dateOfBirth) {
+      this.dateOfBirth = dateOfBirth;
+    }
+    
+          private String phone;
+    public String getPhone() {
+      return phone;
+    }
+    public void setPhone(String phone) {
+      this.phone = phone;
+    }
+    
+          private String mobile;
+    public String getMobile() {
+      return mobile;
+    }
+    public void setMobile(String mobile) {
+      this.mobile = mobile;
+    }
+    
+          private String address;
+    public String getAddress() {
+      return address;
+    }
+    public void setAddress(String address) {
+      this.address = address;
+    }
+    
+          private String cds;
+    public String getCds() {
+      return cds;
+    }
+    public void setCds(String cds) {
+      this.cds = cds;
+    }
+    
+          private String idAda;
+    public String getIdAda() {
+      return idAda;
+    }
+    public void setIdAda(String idAda) {
+      this.idAda = idAda;
+    }
+    
     
     public StudentProtoBean() {
     	super();
@@ -124,6 +180,13 @@ public class Esse3ProtoBean {
                                     setCfuTotal(reference.getCfuTotal());
                                     setMarksNumber(reference.getMarksNumber());
                                     setMarksAverage(reference.getMarksAverage());
+                                    setGender(reference.getGender());
+                                    setDateOfBirth(reference.getDateOfBirth());
+                                    setPhone(reference.getPhone());
+                                    setMobile(reference.getMobile());
+                                    setAddress(reference.getAddress());
+                                    setCds(reference.getCds());
+                                    setIdAda(reference.getIdAda());
                       }  
 
     public StudentProtoBean(XSSData data) throws XSSDataException {
@@ -205,6 +268,55 @@ public class Esse3ProtoBean {
                             if (!(item instanceof DOMData)) throw new XSSDataException("Incorrect data type for field marksAverage: expected DOMData");
                                   setMarksAverage(convertToString(((DOMData)item).getStringValue()));
                                       }
+                                if (data.get("gender") != null && !data.get("gender").isEmpty()) {
+            if (data.get("gender").size()>1) throw new XSSDataException("Incorrect data cardinality for field gender: expected single value.");
+            
+            Object item = data.get("gender").get(0); 
+                            if (!(item instanceof DOMData)) throw new XSSDataException("Incorrect data type for field gender: expected DOMData");
+                                  setGender(convertToString(((DOMData)item).getStringValue()));
+                                      }
+                                if (data.get("dateOfBirth") != null && !data.get("dateOfBirth").isEmpty()) {
+            if (data.get("dateOfBirth").size()>1) throw new XSSDataException("Incorrect data cardinality for field dateOfBirth: expected single value.");
+            
+            Object item = data.get("dateOfBirth").get(0); 
+                            if (!(item instanceof DOMData)) throw new XSSDataException("Incorrect data type for field dateOfBirth: expected DOMData");
+                                  setDateOfBirth(convertToString(((DOMData)item).getStringValue()));
+                                      }
+                                if (data.get("phone") != null && !data.get("phone").isEmpty()) {
+            if (data.get("phone").size()>1) throw new XSSDataException("Incorrect data cardinality for field phone: expected single value.");
+            
+            Object item = data.get("phone").get(0); 
+                            if (!(item instanceof DOMData)) throw new XSSDataException("Incorrect data type for field phone: expected DOMData");
+                                  setPhone(convertToString(((DOMData)item).getStringValue()));
+                                      }
+                                if (data.get("mobile") != null && !data.get("mobile").isEmpty()) {
+            if (data.get("mobile").size()>1) throw new XSSDataException("Incorrect data cardinality for field mobile: expected single value.");
+            
+            Object item = data.get("mobile").get(0); 
+                            if (!(item instanceof DOMData)) throw new XSSDataException("Incorrect data type for field mobile: expected DOMData");
+                                  setMobile(convertToString(((DOMData)item).getStringValue()));
+                                      }
+                                if (data.get("address") != null && !data.get("address").isEmpty()) {
+            if (data.get("address").size()>1) throw new XSSDataException("Incorrect data cardinality for field address: expected single value.");
+            
+            Object item = data.get("address").get(0); 
+                            if (!(item instanceof DOMData)) throw new XSSDataException("Incorrect data type for field address: expected DOMData");
+                                  setAddress(convertToString(((DOMData)item).getStringValue()));
+                                      }
+                                if (data.get("cds") != null && !data.get("cds").isEmpty()) {
+            if (data.get("cds").size()>1) throw new XSSDataException("Incorrect data cardinality for field cds: expected single value.");
+            
+            Object item = data.get("cds").get(0); 
+                            if (!(item instanceof DOMData)) throw new XSSDataException("Incorrect data type for field cds: expected DOMData");
+                                  setCds(convertToString(((DOMData)item).getStringValue()));
+                                      }
+                                if (data.get("idAda") != null && !data.get("idAda").isEmpty()) {
+            if (data.get("idAda").size()>1) throw new XSSDataException("Incorrect data cardinality for field idAda: expected single value.");
+            
+            Object item = data.get("idAda").get(0); 
+                            if (!(item instanceof DOMData)) throw new XSSDataException("Incorrect data type for field idAda: expected DOMData");
+                                  setIdAda(convertToString(((DOMData)item).getStringValue()));
+                                      }
                   }  
 
     
@@ -242,6 +354,27 @@ public class Esse3ProtoBean {
       }
                                     if (getMarksAverage() != null) {
       	builder.setMarksAverage(getMarksAverage());
+      }
+                                    if (getGender() != null) {
+      	builder.setGender(getGender());
+      }
+                                    if (getDateOfBirth() != null) {
+      	builder.setDateOfBirth(getDateOfBirth());
+      }
+                                    if (getPhone() != null) {
+      	builder.setPhone(getPhone());
+      }
+                                    if (getMobile() != null) {
+      	builder.setMobile(getMobile());
+      }
+                                    if (getAddress() != null) {
+      	builder.setAddress(getAddress());
+      }
+                                    if (getCds() != null) {
+      	builder.setCds(getCds());
+      }
+                                    if (getIdAda() != null) {
+      	builder.setIdAda(getIdAda());
       }
                         return builder.buildPartial();
     }
@@ -404,12 +537,12 @@ public class Esse3ProtoBean {
     
   }
   public static class StudentExamsProtoBean implements ProtoBean {
-          private String fiscalCode;
-    public String getFiscalCode() {
-      return fiscalCode;
+          private String idAda;
+    public String getIdAda() {
+      return idAda;
     }
-    public void setFiscalCode(String fiscalCode) {
-      this.fiscalCode = fiscalCode;
+    public void setIdAda(String idAda) {
+      this.idAda = idAda;
     }
     
           private List<smartcampus.service.esse3.data.message.Esse3ProtoBean.ExamProtoBean> examsList;
@@ -426,6 +559,20 @@ public class Esse3ProtoBean {
       return examsList .size();
     }
     
+          private List<smartcampus.service.esse3.data.message.Esse3ProtoBean.ExamProtoBean> todoList;
+    public List<smartcampus.service.esse3.data.message.Esse3ProtoBean.ExamProtoBean> getTodoList() {
+      return todoList;
+    }
+    public void setTodoList(List<smartcampus.service.esse3.data.message.Esse3ProtoBean.ExamProtoBean> todoList) {
+      this.todoList = todoList;
+    }
+    public smartcampus.service.esse3.data.message.Esse3ProtoBean.ExamProtoBean getTodo(int i) {
+      return todoList .get(i);
+    }
+    public int getTodoCount() {
+      return todoList .size();
+    }
+    
     
     public StudentExamsProtoBean() {
     	super();
@@ -433,23 +580,29 @@ public class Esse3ProtoBean {
     
     public StudentExamsProtoBean(smartcampus.service.esse3.data.message.Esse3.StudentExams reference) {
       super();
-                        setFiscalCode(reference.getFiscalCode());
+                        setIdAda(reference.getIdAda());
                                     if (reference.getExamsList()!=null) {
         examsList = new LinkedList<smartcampus.service.esse3.data.message.Esse3ProtoBean.ExamProtoBean>();
         for (smartcampus.service.esse3.data.message.Esse3.Exam item : reference.getExamsList()) {
           getExamsList().add(new smartcampus.service.esse3.data.message.Esse3ProtoBean.ExamProtoBean(item));
         }
       }
+                                    if (reference.getTodoList()!=null) {
+        todoList = new LinkedList<smartcampus.service.esse3.data.message.Esse3ProtoBean.ExamProtoBean>();
+        for (smartcampus.service.esse3.data.message.Esse3.Exam item : reference.getTodoList()) {
+          getTodoList().add(new smartcampus.service.esse3.data.message.Esse3ProtoBean.ExamProtoBean(item));
+        }
+      }
                       }  
 
     public StudentExamsProtoBean(XSSData data) throws XSSDataException {
       super();
-                        if (data.get("fiscalCode") != null && !data.get("fiscalCode").isEmpty()) {
-            if (data.get("fiscalCode").size()>1) throw new XSSDataException("Incorrect data cardinality for field fiscalCode: expected single value.");
+                        if (data.get("idAda") != null && !data.get("idAda").isEmpty()) {
+            if (data.get("idAda").size()>1) throw new XSSDataException("Incorrect data cardinality for field idAda: expected single value.");
             
-            Object item = data.get("fiscalCode").get(0); 
-                            if (!(item instanceof DOMData)) throw new XSSDataException("Incorrect data type for field fiscalCode: expected DOMData");
-                                  setFiscalCode(convertToString(((DOMData)item).getStringValue()));
+            Object item = data.get("idAda").get(0); 
+                            if (!(item instanceof DOMData)) throw new XSSDataException("Incorrect data type for field idAda: expected DOMData");
+                                  setIdAda(convertToString(((DOMData)item).getStringValue()));
                                       }
                                 examsList = new LinkedList<smartcampus.service.esse3.data.message.Esse3ProtoBean.ExamProtoBean>();
           if (data.get("exams")!=null) {
@@ -458,17 +611,29 @@ public class Esse3ProtoBean {
                 getExamsList().add(new smartcampus.service.esse3.data.message.Esse3ProtoBean.ExamProtoBean((XSSData)item));
                           }
           }
+                                todoList = new LinkedList<smartcampus.service.esse3.data.message.Esse3ProtoBean.ExamProtoBean>();
+          if (data.get("todo")!=null) {
+            for (Object item : data.get("todo")) {
+                              if (!(item instanceof XSSData)) throw new XSSDataException("Incorrect data type for field todo: expected XSSData");
+                getTodoList().add(new smartcampus.service.esse3.data.message.Esse3ProtoBean.ExamProtoBean((XSSData)item));
+                          }
+          }
                   }  
 
     
     public smartcampus.service.esse3.data.message.Esse3.StudentExams buildMessage() {
       smartcampus.service.esse3.data.message.Esse3.StudentExams .Builder builder = smartcampus.service.esse3.data.message.Esse3.StudentExams .newBuilder();
-                        if (getFiscalCode() != null) {
-      	builder.setFiscalCode(getFiscalCode());
+                        if (getIdAda() != null) {
+      	builder.setIdAda(getIdAda());
       }
                               if (getExamsList()!=null) {
         for (smartcampus.service.esse3.data.message.Esse3ProtoBean.ExamProtoBean item : getExamsList()) {
                     builder. addExams(item.buildMessage());
+                  }
+      }
+                        if (getTodoList()!=null) {
+        for (smartcampus.service.esse3.data.message.Esse3ProtoBean.ExamProtoBean item : getTodoList()) {
+                    builder. addTodo(item.buildMessage());
                   }
       }
                   return builder.buildPartial();

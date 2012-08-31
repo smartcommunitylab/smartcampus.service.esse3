@@ -21,8 +21,8 @@ import smartcampus.service.esse3.impl.GetStudentDataDataFlow;
 
 import com.google.protobuf.InvalidProtocolBufferException;
 
-public class TestDataFlow extends TestCase {
-	public void atestRun() throws PersistenceException, EntityNotFoundException, InvalidProtocolBufferException {
+public class TestDataFlowADA extends TestCase {
+	public void testRun() throws PersistenceException, EntityNotFoundException, InvalidProtocolBufferException {
 		ApplicationContext context = new ClassPathXmlApplicationContext(new String[] { "/test-context.xml", "/applicationContext.xml" });
 		assertNotNull(context);
 		PersistenceEngine persistenceEngine = (PersistenceEngine) context.getBean("busPersistenceEngineDAO");
@@ -37,16 +37,11 @@ public class TestDataFlow extends TestCase {
 		in.nextLine();
 
 		Map<String, Object> studentParameters = new HashMap<String, Object>();
-		studentParameters.put("fiscalCode", "ZMBSCR83L08H330I");
-		// studentParameters.put("fiscalCode", "FSTMRZ68M14H612N");
-
-		Map<String, Object> examParameters = new HashMap<String, Object>();
-		examParameters.put("cod", "45314");
-		examParameters.put("aaOff", "2005");
+		studentParameters.put("idAda", "PER0000510");
 
 		Object object = null;
 		try {
-			object = busServiceHandler.invokeService("smartcampus.service.esse3", "GetStudentData", studentParameters, null);
+			object = busServiceHandler.invokeService("smartcampus.service.esse3", "GetStudentExams", studentParameters, null);
 			// object = busServiceHandler.invokeService("smartcampus.service.esse3",
 			// "GetStudentExams", studentParameters, null);
 			// object = busServiceHandler.invokeService("smartcampus.service.esse3",
@@ -60,16 +55,11 @@ public class TestDataFlow extends TestCase {
 			e.printStackTrace();
 		}
 		assertTrue(true);
+		
+		System.out.println("Waiting...");
+		in = new Scanner(System.in);
+		in.nextLine();
 
 	}
 
-	public void test() throws ServiceException {
-		Map<String, Object> studentParameters = new HashMap<String, Object>();
-		studentParameters.put("fiscalCode", "ZMBSCR83L08H330I");
-		
-		DataFlowTestHelper helper = new DataFlowTestHelper();
-		Map<String, Object> out = helper.executeDataFlow("smartcampus.service.esse3",  "GetStudentData", new GetStudentDataDataFlow(), studentParameters);
-		System.err.println(out);
-		
-	}
 }

@@ -54,6 +54,34 @@ public final class Esse3 {
     // required string marksAverage = 11;
     boolean hasMarksAverage();
     String getMarksAverage();
+    
+    // required string gender = 12;
+    boolean hasGender();
+    String getGender();
+    
+    // required string dateOfBirth = 13;
+    boolean hasDateOfBirth();
+    String getDateOfBirth();
+    
+    // required string phone = 14;
+    boolean hasPhone();
+    String getPhone();
+    
+    // required string mobile = 15;
+    boolean hasMobile();
+    String getMobile();
+    
+    // required string address = 16;
+    boolean hasAddress();
+    String getAddress();
+    
+    // required string cds = 17;
+    boolean hasCds();
+    String getCds();
+    
+    // required string idAda = 18;
+    boolean hasIdAda();
+    String getIdAda();
   }
   public static final class Student extends
       com.google.protobuf.GeneratedMessage
@@ -436,6 +464,230 @@ public final class Esse3 {
       }
     }
     
+    // required string gender = 12;
+    public static final int GENDER_FIELD_NUMBER = 12;
+    private java.lang.Object gender_;
+    public boolean hasGender() {
+      return ((bitField0_ & 0x00000800) == 0x00000800);
+    }
+    public String getGender() {
+      java.lang.Object ref = gender_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+          gender_ = s;
+        }
+        return s;
+      }
+    }
+    private com.google.protobuf.ByteString getGenderBytes() {
+      java.lang.Object ref = gender_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        gender_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    
+    // required string dateOfBirth = 13;
+    public static final int DATEOFBIRTH_FIELD_NUMBER = 13;
+    private java.lang.Object dateOfBirth_;
+    public boolean hasDateOfBirth() {
+      return ((bitField0_ & 0x00001000) == 0x00001000);
+    }
+    public String getDateOfBirth() {
+      java.lang.Object ref = dateOfBirth_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+          dateOfBirth_ = s;
+        }
+        return s;
+      }
+    }
+    private com.google.protobuf.ByteString getDateOfBirthBytes() {
+      java.lang.Object ref = dateOfBirth_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        dateOfBirth_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    
+    // required string phone = 14;
+    public static final int PHONE_FIELD_NUMBER = 14;
+    private java.lang.Object phone_;
+    public boolean hasPhone() {
+      return ((bitField0_ & 0x00002000) == 0x00002000);
+    }
+    public String getPhone() {
+      java.lang.Object ref = phone_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+          phone_ = s;
+        }
+        return s;
+      }
+    }
+    private com.google.protobuf.ByteString getPhoneBytes() {
+      java.lang.Object ref = phone_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        phone_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    
+    // required string mobile = 15;
+    public static final int MOBILE_FIELD_NUMBER = 15;
+    private java.lang.Object mobile_;
+    public boolean hasMobile() {
+      return ((bitField0_ & 0x00004000) == 0x00004000);
+    }
+    public String getMobile() {
+      java.lang.Object ref = mobile_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+          mobile_ = s;
+        }
+        return s;
+      }
+    }
+    private com.google.protobuf.ByteString getMobileBytes() {
+      java.lang.Object ref = mobile_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        mobile_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    
+    // required string address = 16;
+    public static final int ADDRESS_FIELD_NUMBER = 16;
+    private java.lang.Object address_;
+    public boolean hasAddress() {
+      return ((bitField0_ & 0x00008000) == 0x00008000);
+    }
+    public String getAddress() {
+      java.lang.Object ref = address_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+          address_ = s;
+        }
+        return s;
+      }
+    }
+    private com.google.protobuf.ByteString getAddressBytes() {
+      java.lang.Object ref = address_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    
+    // required string cds = 17;
+    public static final int CDS_FIELD_NUMBER = 17;
+    private java.lang.Object cds_;
+    public boolean hasCds() {
+      return ((bitField0_ & 0x00010000) == 0x00010000);
+    }
+    public String getCds() {
+      java.lang.Object ref = cds_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+          cds_ = s;
+        }
+        return s;
+      }
+    }
+    private com.google.protobuf.ByteString getCdsBytes() {
+      java.lang.Object ref = cds_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        cds_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    
+    // required string idAda = 18;
+    public static final int IDADA_FIELD_NUMBER = 18;
+    private java.lang.Object idAda_;
+    public boolean hasIdAda() {
+      return ((bitField0_ & 0x00020000) == 0x00020000);
+    }
+    public String getIdAda() {
+      java.lang.Object ref = idAda_;
+      if (ref instanceof String) {
+        return (String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        String s = bs.toStringUtf8();
+        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+          idAda_ = s;
+        }
+        return s;
+      }
+    }
+    private com.google.protobuf.ByteString getIdAdaBytes() {
+      java.lang.Object ref = idAda_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        idAda_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    
     private void initFields() {
       fiscalCode_ = "";
       name_ = "";
@@ -448,6 +700,13 @@ public final class Esse3 {
       cfuTotal_ = "";
       marksNumber_ = "";
       marksAverage_ = "";
+      gender_ = "";
+      dateOfBirth_ = "";
+      phone_ = "";
+      mobile_ = "";
+      address_ = "";
+      cds_ = "";
+      idAda_ = "";
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -498,6 +757,34 @@ public final class Esse3 {
         memoizedIsInitialized = 0;
         return false;
       }
+      if (!hasGender()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasDateOfBirth()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasPhone()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasMobile()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasAddress()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasCds()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
+      if (!hasIdAda()) {
+        memoizedIsInitialized = 0;
+        return false;
+      }
       memoizedIsInitialized = 1;
       return true;
     }
@@ -537,6 +824,27 @@ public final class Esse3 {
       }
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
         output.writeBytes(11, getMarksAverageBytes());
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        output.writeBytes(12, getGenderBytes());
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        output.writeBytes(13, getDateOfBirthBytes());
+      }
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        output.writeBytes(14, getPhoneBytes());
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        output.writeBytes(15, getMobileBytes());
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        output.writeBytes(16, getAddressBytes());
+      }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        output.writeBytes(17, getCdsBytes());
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        output.writeBytes(18, getIdAdaBytes());
       }
       getUnknownFields().writeTo(output);
     }
@@ -590,6 +898,34 @@ public final class Esse3 {
       if (((bitField0_ & 0x00000400) == 0x00000400)) {
         size += com.google.protobuf.CodedOutputStream
           .computeBytesSize(11, getMarksAverageBytes());
+      }
+      if (((bitField0_ & 0x00000800) == 0x00000800)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(12, getGenderBytes());
+      }
+      if (((bitField0_ & 0x00001000) == 0x00001000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(13, getDateOfBirthBytes());
+      }
+      if (((bitField0_ & 0x00002000) == 0x00002000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(14, getPhoneBytes());
+      }
+      if (((bitField0_ & 0x00004000) == 0x00004000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(15, getMobileBytes());
+      }
+      if (((bitField0_ & 0x00008000) == 0x00008000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(16, getAddressBytes());
+      }
+      if (((bitField0_ & 0x00010000) == 0x00010000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(17, getCdsBytes());
+      }
+      if (((bitField0_ & 0x00020000) == 0x00020000)) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBytesSize(18, getIdAdaBytes());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -737,6 +1073,20 @@ public final class Esse3 {
         bitField0_ = (bitField0_ & ~0x00000200);
         marksAverage_ = "";
         bitField0_ = (bitField0_ & ~0x00000400);
+        gender_ = "";
+        bitField0_ = (bitField0_ & ~0x00000800);
+        dateOfBirth_ = "";
+        bitField0_ = (bitField0_ & ~0x00001000);
+        phone_ = "";
+        bitField0_ = (bitField0_ & ~0x00002000);
+        mobile_ = "";
+        bitField0_ = (bitField0_ & ~0x00004000);
+        address_ = "";
+        bitField0_ = (bitField0_ & ~0x00008000);
+        cds_ = "";
+        bitField0_ = (bitField0_ & ~0x00010000);
+        idAda_ = "";
+        bitField0_ = (bitField0_ & ~0x00020000);
         return this;
       }
       
@@ -819,6 +1169,34 @@ public final class Esse3 {
           to_bitField0_ |= 0x00000400;
         }
         result.marksAverage_ = marksAverage_;
+        if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
+          to_bitField0_ |= 0x00000800;
+        }
+        result.gender_ = gender_;
+        if (((from_bitField0_ & 0x00001000) == 0x00001000)) {
+          to_bitField0_ |= 0x00001000;
+        }
+        result.dateOfBirth_ = dateOfBirth_;
+        if (((from_bitField0_ & 0x00002000) == 0x00002000)) {
+          to_bitField0_ |= 0x00002000;
+        }
+        result.phone_ = phone_;
+        if (((from_bitField0_ & 0x00004000) == 0x00004000)) {
+          to_bitField0_ |= 0x00004000;
+        }
+        result.mobile_ = mobile_;
+        if (((from_bitField0_ & 0x00008000) == 0x00008000)) {
+          to_bitField0_ |= 0x00008000;
+        }
+        result.address_ = address_;
+        if (((from_bitField0_ & 0x00010000) == 0x00010000)) {
+          to_bitField0_ |= 0x00010000;
+        }
+        result.cds_ = cds_;
+        if (((from_bitField0_ & 0x00020000) == 0x00020000)) {
+          to_bitField0_ |= 0x00020000;
+        }
+        result.idAda_ = idAda_;
         result.bitField0_ = to_bitField0_;
         onBuilt();
         return result;
@@ -868,6 +1246,27 @@ public final class Esse3 {
         if (other.hasMarksAverage()) {
           setMarksAverage(other.getMarksAverage());
         }
+        if (other.hasGender()) {
+          setGender(other.getGender());
+        }
+        if (other.hasDateOfBirth()) {
+          setDateOfBirth(other.getDateOfBirth());
+        }
+        if (other.hasPhone()) {
+          setPhone(other.getPhone());
+        }
+        if (other.hasMobile()) {
+          setMobile(other.getMobile());
+        }
+        if (other.hasAddress()) {
+          setAddress(other.getAddress());
+        }
+        if (other.hasCds()) {
+          setCds(other.getCds());
+        }
+        if (other.hasIdAda()) {
+          setIdAda(other.getIdAda());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
@@ -914,6 +1313,34 @@ public final class Esse3 {
           return false;
         }
         if (!hasMarksAverage()) {
+          
+          return false;
+        }
+        if (!hasGender()) {
+          
+          return false;
+        }
+        if (!hasDateOfBirth()) {
+          
+          return false;
+        }
+        if (!hasPhone()) {
+          
+          return false;
+        }
+        if (!hasMobile()) {
+          
+          return false;
+        }
+        if (!hasAddress()) {
+          
+          return false;
+        }
+        if (!hasCds()) {
+          
+          return false;
+        }
+        if (!hasIdAda()) {
           
           return false;
         }
@@ -996,6 +1423,41 @@ public final class Esse3 {
             case 90: {
               bitField0_ |= 0x00000400;
               marksAverage_ = input.readBytes();
+              break;
+            }
+            case 98: {
+              bitField0_ |= 0x00000800;
+              gender_ = input.readBytes();
+              break;
+            }
+            case 106: {
+              bitField0_ |= 0x00001000;
+              dateOfBirth_ = input.readBytes();
+              break;
+            }
+            case 114: {
+              bitField0_ |= 0x00002000;
+              phone_ = input.readBytes();
+              break;
+            }
+            case 122: {
+              bitField0_ |= 0x00004000;
+              mobile_ = input.readBytes();
+              break;
+            }
+            case 130: {
+              bitField0_ |= 0x00008000;
+              address_ = input.readBytes();
+              break;
+            }
+            case 138: {
+              bitField0_ |= 0x00010000;
+              cds_ = input.readBytes();
+              break;
+            }
+            case 146: {
+              bitField0_ |= 0x00020000;
+              idAda_ = input.readBytes();
               break;
             }
           }
@@ -1397,6 +1859,258 @@ public final class Esse3 {
       void setMarksAverage(com.google.protobuf.ByteString value) {
         bitField0_ |= 0x00000400;
         marksAverage_ = value;
+        onChanged();
+      }
+      
+      // required string gender = 12;
+      private java.lang.Object gender_ = "";
+      public boolean hasGender() {
+        return ((bitField0_ & 0x00000800) == 0x00000800);
+      }
+      public String getGender() {
+        java.lang.Object ref = gender_;
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          gender_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      public Builder setGender(String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000800;
+        gender_ = value;
+        onChanged();
+        return this;
+      }
+      public Builder clearGender() {
+        bitField0_ = (bitField0_ & ~0x00000800);
+        gender_ = getDefaultInstance().getGender();
+        onChanged();
+        return this;
+      }
+      void setGender(com.google.protobuf.ByteString value) {
+        bitField0_ |= 0x00000800;
+        gender_ = value;
+        onChanged();
+      }
+      
+      // required string dateOfBirth = 13;
+      private java.lang.Object dateOfBirth_ = "";
+      public boolean hasDateOfBirth() {
+        return ((bitField0_ & 0x00001000) == 0x00001000);
+      }
+      public String getDateOfBirth() {
+        java.lang.Object ref = dateOfBirth_;
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          dateOfBirth_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      public Builder setDateOfBirth(String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00001000;
+        dateOfBirth_ = value;
+        onChanged();
+        return this;
+      }
+      public Builder clearDateOfBirth() {
+        bitField0_ = (bitField0_ & ~0x00001000);
+        dateOfBirth_ = getDefaultInstance().getDateOfBirth();
+        onChanged();
+        return this;
+      }
+      void setDateOfBirth(com.google.protobuf.ByteString value) {
+        bitField0_ |= 0x00001000;
+        dateOfBirth_ = value;
+        onChanged();
+      }
+      
+      // required string phone = 14;
+      private java.lang.Object phone_ = "";
+      public boolean hasPhone() {
+        return ((bitField0_ & 0x00002000) == 0x00002000);
+      }
+      public String getPhone() {
+        java.lang.Object ref = phone_;
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          phone_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      public Builder setPhone(String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00002000;
+        phone_ = value;
+        onChanged();
+        return this;
+      }
+      public Builder clearPhone() {
+        bitField0_ = (bitField0_ & ~0x00002000);
+        phone_ = getDefaultInstance().getPhone();
+        onChanged();
+        return this;
+      }
+      void setPhone(com.google.protobuf.ByteString value) {
+        bitField0_ |= 0x00002000;
+        phone_ = value;
+        onChanged();
+      }
+      
+      // required string mobile = 15;
+      private java.lang.Object mobile_ = "";
+      public boolean hasMobile() {
+        return ((bitField0_ & 0x00004000) == 0x00004000);
+      }
+      public String getMobile() {
+        java.lang.Object ref = mobile_;
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          mobile_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      public Builder setMobile(String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00004000;
+        mobile_ = value;
+        onChanged();
+        return this;
+      }
+      public Builder clearMobile() {
+        bitField0_ = (bitField0_ & ~0x00004000);
+        mobile_ = getDefaultInstance().getMobile();
+        onChanged();
+        return this;
+      }
+      void setMobile(com.google.protobuf.ByteString value) {
+        bitField0_ |= 0x00004000;
+        mobile_ = value;
+        onChanged();
+      }
+      
+      // required string address = 16;
+      private java.lang.Object address_ = "";
+      public boolean hasAddress() {
+        return ((bitField0_ & 0x00008000) == 0x00008000);
+      }
+      public String getAddress() {
+        java.lang.Object ref = address_;
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          address_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      public Builder setAddress(String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00008000;
+        address_ = value;
+        onChanged();
+        return this;
+      }
+      public Builder clearAddress() {
+        bitField0_ = (bitField0_ & ~0x00008000);
+        address_ = getDefaultInstance().getAddress();
+        onChanged();
+        return this;
+      }
+      void setAddress(com.google.protobuf.ByteString value) {
+        bitField0_ |= 0x00008000;
+        address_ = value;
+        onChanged();
+      }
+      
+      // required string cds = 17;
+      private java.lang.Object cds_ = "";
+      public boolean hasCds() {
+        return ((bitField0_ & 0x00010000) == 0x00010000);
+      }
+      public String getCds() {
+        java.lang.Object ref = cds_;
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          cds_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      public Builder setCds(String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00010000;
+        cds_ = value;
+        onChanged();
+        return this;
+      }
+      public Builder clearCds() {
+        bitField0_ = (bitField0_ & ~0x00010000);
+        cds_ = getDefaultInstance().getCds();
+        onChanged();
+        return this;
+      }
+      void setCds(com.google.protobuf.ByteString value) {
+        bitField0_ |= 0x00010000;
+        cds_ = value;
+        onChanged();
+      }
+      
+      // required string idAda = 18;
+      private java.lang.Object idAda_ = "";
+      public boolean hasIdAda() {
+        return ((bitField0_ & 0x00020000) == 0x00020000);
+      }
+      public String getIdAda() {
+        java.lang.Object ref = idAda_;
+        if (!(ref instanceof String)) {
+          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          idAda_ = s;
+          return s;
+        } else {
+          return (String) ref;
+        }
+      }
+      public Builder setIdAda(String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00020000;
+        idAda_ = value;
+        onChanged();
+        return this;
+      }
+      public Builder clearIdAda() {
+        bitField0_ = (bitField0_ & ~0x00020000);
+        idAda_ = getDefaultInstance().getIdAda();
+        onChanged();
+        return this;
+      }
+      void setIdAda(com.google.protobuf.ByteString value) {
+        bitField0_ |= 0x00020000;
+        idAda_ = value;
         onChanged();
       }
       
@@ -2335,9 +3049,9 @@ public final class Esse3 {
   public interface StudentExamsOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
     
-    // required string fiscalCode = 1;
-    boolean hasFiscalCode();
-    String getFiscalCode();
+    // required string idAda = 1;
+    boolean hasIdAda();
+    String getIdAda();
     
     // repeated .smartcampus.service.esse3.data.message.Exam exams = 2;
     java.util.List<smartcampus.service.esse3.data.message.Esse3.Exam> 
@@ -2347,6 +3061,16 @@ public final class Esse3 {
     java.util.List<? extends smartcampus.service.esse3.data.message.Esse3.ExamOrBuilder> 
         getExamsOrBuilderList();
     smartcampus.service.esse3.data.message.Esse3.ExamOrBuilder getExamsOrBuilder(
+        int index);
+    
+    // repeated .smartcampus.service.esse3.data.message.Exam todo = 3;
+    java.util.List<smartcampus.service.esse3.data.message.Esse3.Exam> 
+        getTodoList();
+    smartcampus.service.esse3.data.message.Esse3.Exam getTodo(int index);
+    int getTodoCount();
+    java.util.List<? extends smartcampus.service.esse3.data.message.Esse3.ExamOrBuilder> 
+        getTodoOrBuilderList();
+    smartcampus.service.esse3.data.message.Esse3.ExamOrBuilder getTodoOrBuilder(
         int index);
   }
   public static final class StudentExams extends
@@ -2378,14 +3102,14 @@ public final class Esse3 {
     }
     
     private int bitField0_;
-    // required string fiscalCode = 1;
-    public static final int FISCALCODE_FIELD_NUMBER = 1;
-    private java.lang.Object fiscalCode_;
-    public boolean hasFiscalCode() {
+    // required string idAda = 1;
+    public static final int IDADA_FIELD_NUMBER = 1;
+    private java.lang.Object idAda_;
+    public boolean hasIdAda() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public String getFiscalCode() {
-      java.lang.Object ref = fiscalCode_;
+    public String getIdAda() {
+      java.lang.Object ref = idAda_;
       if (ref instanceof String) {
         return (String) ref;
       } else {
@@ -2393,17 +3117,17 @@ public final class Esse3 {
             (com.google.protobuf.ByteString) ref;
         String s = bs.toStringUtf8();
         if (com.google.protobuf.Internal.isValidUtf8(bs)) {
-          fiscalCode_ = s;
+          idAda_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getFiscalCodeBytes() {
-      java.lang.Object ref = fiscalCode_;
+    private com.google.protobuf.ByteString getIdAdaBytes() {
+      java.lang.Object ref = idAda_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8((String) ref);
-        fiscalCode_ = b;
+        idAda_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -2431,21 +3155,49 @@ public final class Esse3 {
       return exams_.get(index);
     }
     
+    // repeated .smartcampus.service.esse3.data.message.Exam todo = 3;
+    public static final int TODO_FIELD_NUMBER = 3;
+    private java.util.List<smartcampus.service.esse3.data.message.Esse3.Exam> todo_;
+    public java.util.List<smartcampus.service.esse3.data.message.Esse3.Exam> getTodoList() {
+      return todo_;
+    }
+    public java.util.List<? extends smartcampus.service.esse3.data.message.Esse3.ExamOrBuilder> 
+        getTodoOrBuilderList() {
+      return todo_;
+    }
+    public int getTodoCount() {
+      return todo_.size();
+    }
+    public smartcampus.service.esse3.data.message.Esse3.Exam getTodo(int index) {
+      return todo_.get(index);
+    }
+    public smartcampus.service.esse3.data.message.Esse3.ExamOrBuilder getTodoOrBuilder(
+        int index) {
+      return todo_.get(index);
+    }
+    
     private void initFields() {
-      fiscalCode_ = "";
+      idAda_ = "";
       exams_ = java.util.Collections.emptyList();
+      todo_ = java.util.Collections.emptyList();
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
       byte isInitialized = memoizedIsInitialized;
       if (isInitialized != -1) return isInitialized == 1;
       
-      if (!hasFiscalCode()) {
+      if (!hasIdAda()) {
         memoizedIsInitialized = 0;
         return false;
       }
       for (int i = 0; i < getExamsCount(); i++) {
         if (!getExams(i).isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
+      }
+      for (int i = 0; i < getTodoCount(); i++) {
+        if (!getTodo(i).isInitialized()) {
           memoizedIsInitialized = 0;
           return false;
         }
@@ -2458,10 +3210,13 @@ public final class Esse3 {
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        output.writeBytes(1, getFiscalCodeBytes());
+        output.writeBytes(1, getIdAdaBytes());
       }
       for (int i = 0; i < exams_.size(); i++) {
         output.writeMessage(2, exams_.get(i));
+      }
+      for (int i = 0; i < todo_.size(); i++) {
+        output.writeMessage(3, todo_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -2474,11 +3229,15 @@ public final class Esse3 {
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
         size += com.google.protobuf.CodedOutputStream
-          .computeBytesSize(1, getFiscalCodeBytes());
+          .computeBytesSize(1, getIdAdaBytes());
       }
       for (int i = 0; i < exams_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(2, exams_.get(i));
+      }
+      for (int i = 0; i < todo_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, todo_.get(i));
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSerializedSize = size;
@@ -2597,6 +3356,7 @@ public final class Esse3 {
       private void maybeForceBuilderInitialization() {
         if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
           getExamsFieldBuilder();
+          getTodoFieldBuilder();
         }
       }
       private static Builder create() {
@@ -2605,13 +3365,19 @@ public final class Esse3 {
       
       public Builder clear() {
         super.clear();
-        fiscalCode_ = "";
+        idAda_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
         if (examsBuilder_ == null) {
           exams_ = java.util.Collections.emptyList();
           bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           examsBuilder_.clear();
+        }
+        if (todoBuilder_ == null) {
+          todo_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          todoBuilder_.clear();
         }
         return this;
       }
@@ -2654,7 +3420,7 @@ public final class Esse3 {
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
           to_bitField0_ |= 0x00000001;
         }
-        result.fiscalCode_ = fiscalCode_;
+        result.idAda_ = idAda_;
         if (examsBuilder_ == null) {
           if (((bitField0_ & 0x00000002) == 0x00000002)) {
             exams_ = java.util.Collections.unmodifiableList(exams_);
@@ -2663,6 +3429,15 @@ public final class Esse3 {
           result.exams_ = exams_;
         } else {
           result.exams_ = examsBuilder_.build();
+        }
+        if (todoBuilder_ == null) {
+          if (((bitField0_ & 0x00000004) == 0x00000004)) {
+            todo_ = java.util.Collections.unmodifiableList(todo_);
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.todo_ = todo_;
+        } else {
+          result.todo_ = todoBuilder_.build();
         }
         result.bitField0_ = to_bitField0_;
         onBuilt();
@@ -2680,8 +3455,8 @@ public final class Esse3 {
       
       public Builder mergeFrom(smartcampus.service.esse3.data.message.Esse3.StudentExams other) {
         if (other == smartcampus.service.esse3.data.message.Esse3.StudentExams.getDefaultInstance()) return this;
-        if (other.hasFiscalCode()) {
-          setFiscalCode(other.getFiscalCode());
+        if (other.hasIdAda()) {
+          setIdAda(other.getIdAda());
         }
         if (examsBuilder_ == null) {
           if (!other.exams_.isEmpty()) {
@@ -2709,17 +3484,49 @@ public final class Esse3 {
             }
           }
         }
+        if (todoBuilder_ == null) {
+          if (!other.todo_.isEmpty()) {
+            if (todo_.isEmpty()) {
+              todo_ = other.todo_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+            } else {
+              ensureTodoIsMutable();
+              todo_.addAll(other.todo_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.todo_.isEmpty()) {
+            if (todoBuilder_.isEmpty()) {
+              todoBuilder_.dispose();
+              todoBuilder_ = null;
+              todo_ = other.todo_;
+              bitField0_ = (bitField0_ & ~0x00000004);
+              todoBuilder_ = 
+                com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                   getTodoFieldBuilder() : null;
+            } else {
+              todoBuilder_.addAllMessages(other.todo_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         return this;
       }
       
       public final boolean isInitialized() {
-        if (!hasFiscalCode()) {
+        if (!hasIdAda()) {
           
           return false;
         }
         for (int i = 0; i < getExamsCount(); i++) {
           if (!getExams(i).isInitialized()) {
+            
+            return false;
+          }
+        }
+        for (int i = 0; i < getTodoCount(); i++) {
+          if (!getTodo(i).isInitialized()) {
             
             return false;
           }
@@ -2752,7 +3559,7 @@ public final class Esse3 {
             }
             case 10: {
               bitField0_ |= 0x00000001;
-              fiscalCode_ = input.readBytes();
+              idAda_ = input.readBytes();
               break;
             }
             case 18: {
@@ -2761,45 +3568,51 @@ public final class Esse3 {
               addExams(subBuilder.buildPartial());
               break;
             }
+            case 26: {
+              smartcampus.service.esse3.data.message.Esse3.Exam.Builder subBuilder = smartcampus.service.esse3.data.message.Esse3.Exam.newBuilder();
+              input.readMessage(subBuilder, extensionRegistry);
+              addTodo(subBuilder.buildPartial());
+              break;
+            }
           }
         }
       }
       
       private int bitField0_;
       
-      // required string fiscalCode = 1;
-      private java.lang.Object fiscalCode_ = "";
-      public boolean hasFiscalCode() {
+      // required string idAda = 1;
+      private java.lang.Object idAda_ = "";
+      public boolean hasIdAda() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public String getFiscalCode() {
-        java.lang.Object ref = fiscalCode_;
+      public String getIdAda() {
+        java.lang.Object ref = idAda_;
         if (!(ref instanceof String)) {
           String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
-          fiscalCode_ = s;
+          idAda_ = s;
           return s;
         } else {
           return (String) ref;
         }
       }
-      public Builder setFiscalCode(String value) {
+      public Builder setIdAda(String value) {
         if (value == null) {
     throw new NullPointerException();
   }
   bitField0_ |= 0x00000001;
-        fiscalCode_ = value;
+        idAda_ = value;
         onChanged();
         return this;
       }
-      public Builder clearFiscalCode() {
+      public Builder clearIdAda() {
         bitField0_ = (bitField0_ & ~0x00000001);
-        fiscalCode_ = getDefaultInstance().getFiscalCode();
+        idAda_ = getDefaultInstance().getIdAda();
         onChanged();
         return this;
       }
-      void setFiscalCode(com.google.protobuf.ByteString value) {
+      void setIdAda(com.google.protobuf.ByteString value) {
         bitField0_ |= 0x00000001;
-        fiscalCode_ = value;
+        idAda_ = value;
         onChanged();
       }
       
@@ -2987,6 +3800,192 @@ public final class Esse3 {
           exams_ = null;
         }
         return examsBuilder_;
+      }
+      
+      // repeated .smartcampus.service.esse3.data.message.Exam todo = 3;
+      private java.util.List<smartcampus.service.esse3.data.message.Esse3.Exam> todo_ =
+        java.util.Collections.emptyList();
+      private void ensureTodoIsMutable() {
+        if (!((bitField0_ & 0x00000004) == 0x00000004)) {
+          todo_ = new java.util.ArrayList<smartcampus.service.esse3.data.message.Esse3.Exam>(todo_);
+          bitField0_ |= 0x00000004;
+         }
+      }
+      
+      private com.google.protobuf.RepeatedFieldBuilder<
+          smartcampus.service.esse3.data.message.Esse3.Exam, smartcampus.service.esse3.data.message.Esse3.Exam.Builder, smartcampus.service.esse3.data.message.Esse3.ExamOrBuilder> todoBuilder_;
+      
+      public java.util.List<smartcampus.service.esse3.data.message.Esse3.Exam> getTodoList() {
+        if (todoBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(todo_);
+        } else {
+          return todoBuilder_.getMessageList();
+        }
+      }
+      public int getTodoCount() {
+        if (todoBuilder_ == null) {
+          return todo_.size();
+        } else {
+          return todoBuilder_.getCount();
+        }
+      }
+      public smartcampus.service.esse3.data.message.Esse3.Exam getTodo(int index) {
+        if (todoBuilder_ == null) {
+          return todo_.get(index);
+        } else {
+          return todoBuilder_.getMessage(index);
+        }
+      }
+      public Builder setTodo(
+          int index, smartcampus.service.esse3.data.message.Esse3.Exam value) {
+        if (todoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTodoIsMutable();
+          todo_.set(index, value);
+          onChanged();
+        } else {
+          todoBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      public Builder setTodo(
+          int index, smartcampus.service.esse3.data.message.Esse3.Exam.Builder builderForValue) {
+        if (todoBuilder_ == null) {
+          ensureTodoIsMutable();
+          todo_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          todoBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      public Builder addTodo(smartcampus.service.esse3.data.message.Esse3.Exam value) {
+        if (todoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTodoIsMutable();
+          todo_.add(value);
+          onChanged();
+        } else {
+          todoBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      public Builder addTodo(
+          int index, smartcampus.service.esse3.data.message.Esse3.Exam value) {
+        if (todoBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureTodoIsMutable();
+          todo_.add(index, value);
+          onChanged();
+        } else {
+          todoBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      public Builder addTodo(
+          smartcampus.service.esse3.data.message.Esse3.Exam.Builder builderForValue) {
+        if (todoBuilder_ == null) {
+          ensureTodoIsMutable();
+          todo_.add(builderForValue.build());
+          onChanged();
+        } else {
+          todoBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      public Builder addTodo(
+          int index, smartcampus.service.esse3.data.message.Esse3.Exam.Builder builderForValue) {
+        if (todoBuilder_ == null) {
+          ensureTodoIsMutable();
+          todo_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          todoBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      public Builder addAllTodo(
+          java.lang.Iterable<? extends smartcampus.service.esse3.data.message.Esse3.Exam> values) {
+        if (todoBuilder_ == null) {
+          ensureTodoIsMutable();
+          super.addAll(values, todo_);
+          onChanged();
+        } else {
+          todoBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      public Builder clearTodo() {
+        if (todoBuilder_ == null) {
+          todo_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000004);
+          onChanged();
+        } else {
+          todoBuilder_.clear();
+        }
+        return this;
+      }
+      public Builder removeTodo(int index) {
+        if (todoBuilder_ == null) {
+          ensureTodoIsMutable();
+          todo_.remove(index);
+          onChanged();
+        } else {
+          todoBuilder_.remove(index);
+        }
+        return this;
+      }
+      public smartcampus.service.esse3.data.message.Esse3.Exam.Builder getTodoBuilder(
+          int index) {
+        return getTodoFieldBuilder().getBuilder(index);
+      }
+      public smartcampus.service.esse3.data.message.Esse3.ExamOrBuilder getTodoOrBuilder(
+          int index) {
+        if (todoBuilder_ == null) {
+          return todo_.get(index);  } else {
+          return todoBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      public java.util.List<? extends smartcampus.service.esse3.data.message.Esse3.ExamOrBuilder> 
+           getTodoOrBuilderList() {
+        if (todoBuilder_ != null) {
+          return todoBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(todo_);
+        }
+      }
+      public smartcampus.service.esse3.data.message.Esse3.Exam.Builder addTodoBuilder() {
+        return getTodoFieldBuilder().addBuilder(
+            smartcampus.service.esse3.data.message.Esse3.Exam.getDefaultInstance());
+      }
+      public smartcampus.service.esse3.data.message.Esse3.Exam.Builder addTodoBuilder(
+          int index) {
+        return getTodoFieldBuilder().addBuilder(
+            index, smartcampus.service.esse3.data.message.Esse3.Exam.getDefaultInstance());
+      }
+      public java.util.List<smartcampus.service.esse3.data.message.Esse3.Exam.Builder> 
+           getTodoBuilderList() {
+        return getTodoFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilder<
+          smartcampus.service.esse3.data.message.Esse3.Exam, smartcampus.service.esse3.data.message.Esse3.Exam.Builder, smartcampus.service.esse3.data.message.Esse3.ExamOrBuilder> 
+          getTodoFieldBuilder() {
+        if (todoBuilder_ == null) {
+          todoBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+              smartcampus.service.esse3.data.message.Esse3.Exam, smartcampus.service.esse3.data.message.Esse3.Exam.Builder, smartcampus.service.esse3.data.message.Esse3.ExamOrBuilder>(
+                  todo_,
+                  ((bitField0_ & 0x00000004) == 0x00000004),
+                  getParentForChildren(),
+                  isClean());
+          todo_ = null;
+        }
+        return todoBuilder_;
       }
       
       // @@protoc_insertion_point(builder_scope:smartcampus.service.esse3.data.message.StudentExams)
@@ -5263,26 +6262,30 @@ public final class Esse3 {
   static {
     java.lang.String[] descriptorData = {
       "\n\013esse3.proto\022&smartcampus.service.esse3" +
-      ".data.message\032\ncore.proto\"\340\001\n\007Student\022\022\n" +
+      ".data.message\032\ncore.proto\"\321\002\n\007Student\022\022\n" +
       "\nfiscalCode\030\001 \002(\t\022\014\n\004name\030\002 \002(\t\022\017\n\007surna" +
       "me\030\003 \002(\t\022\026\n\016enrollmentYear\030\004 \002(\t\022\016\n\006nati" +
       "on\030\005 \002(\t\022\024\n\014academicYear\030\006 \002(\t\022\032\n\022supple" +
       "mentaryYears\030\007 \002(\t\022\013\n\003cfu\030\010 \002(\t\022\020\n\010cfuTo" +
       "tal\030\t \002(\t\022\023\n\013marksNumber\030\n \002(\t\022\024\n\014marksA" +
-      "verage\030\013 \002(\t\"i\n\004Exam\022\n\n\002id\030\001 \002(\t\022\013\n\003cod\030" +
-      "\002 \002(\t\022\014\n\004name\030\003 \002(\t\022\016\n\006result\030\004 \002(\t\022\014\n\004l" +
-      "ode\030\005 \002(\010\022\016\n\006weight\030\006 \002(\t\022\014\n\004date\030\007 \002(\003\"",
-      "_\n\014StudentExams\022\022\n\nfiscalCode\030\001 \002(\t\022;\n\005e" +
-      "xams\030\002 \003(\0132,.smartcampus.service.esse3.d" +
-      "ata.message.Exam\"1\n\005AdLog\022\013\n\003cod\030\001 \002(\t\022\r" +
-      "\n\005logId\030\002 \002(\t\022\014\n\004year\030\003 \002(\t\"&\n\017ExamDescr" +
-      "iption\022\023\n\013description\030\003 \001(\t\",\n\013ExamTeach" +
-      "er\022\014\n\004name\030\003 \001(\t\022\017\n\007surname\030\004 \001(\t\"\276\001\n\014Co" +
-      "mpleteExam\022\013\n\003cod\030\001 \002(\t\022\r\n\005aaOff\030\002 \002(\t\022L" +
-      "\n\013description\030\003 \002(\01327.smartcampus.servic" +
-      "e.esse3.data.message.ExamDescription\022D\n\007" +
-      "teacher\030\004 \002(\01323.smartcampus.service.esse",
-      "3.data.message.ExamTeacher"
+      "verage\030\013 \002(\t\022\016\n\006gender\030\014 \002(\t\022\023\n\013dateOfBi" +
+      "rth\030\r \002(\t\022\r\n\005phone\030\016 \002(\t\022\016\n\006mobile\030\017 \002(\t" +
+      "\022\017\n\007address\030\020 \002(\t\022\013\n\003cds\030\021 \002(\t\022\r\n\005idAda\030",
+      "\022 \002(\t\"i\n\004Exam\022\n\n\002id\030\001 \002(\t\022\013\n\003cod\030\002 \002(\t\022\014" +
+      "\n\004name\030\003 \002(\t\022\016\n\006result\030\004 \002(\t\022\014\n\004lode\030\005 \002" +
+      "(\010\022\016\n\006weight\030\006 \002(\t\022\014\n\004date\030\007 \002(\003\"\226\001\n\014Stu" +
+      "dentExams\022\r\n\005idAda\030\001 \002(\t\022;\n\005exams\030\002 \003(\0132" +
+      ",.smartcampus.service.esse3.data.message" +
+      ".Exam\022:\n\004todo\030\003 \003(\0132,.smartcampus.servic" +
+      "e.esse3.data.message.Exam\"1\n\005AdLog\022\013\n\003co" +
+      "d\030\001 \002(\t\022\r\n\005logId\030\002 \002(\t\022\014\n\004year\030\003 \002(\t\"&\n\017" +
+      "ExamDescription\022\023\n\013description\030\003 \001(\t\",\n\013" +
+      "ExamTeacher\022\014\n\004name\030\003 \001(\t\022\017\n\007surname\030\004 \001",
+      "(\t\"\276\001\n\014CompleteExam\022\013\n\003cod\030\001 \002(\t\022\r\n\005aaOf" +
+      "f\030\002 \002(\t\022L\n\013description\030\003 \002(\01327.smartcamp" +
+      "us.service.esse3.data.message.ExamDescri" +
+      "ption\022D\n\007teacher\030\004 \002(\01323.smartcampus.ser" +
+      "vice.esse3.data.message.ExamTeacher"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
@@ -5294,7 +6297,7 @@ public final class Esse3 {
           internal_static_smartcampus_service_esse3_data_message_Student_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_smartcampus_service_esse3_data_message_Student_descriptor,
-              new java.lang.String[] { "FiscalCode", "Name", "Surname", "EnrollmentYear", "Nation", "AcademicYear", "SupplementaryYears", "Cfu", "CfuTotal", "MarksNumber", "MarksAverage", },
+              new java.lang.String[] { "FiscalCode", "Name", "Surname", "EnrollmentYear", "Nation", "AcademicYear", "SupplementaryYears", "Cfu", "CfuTotal", "MarksNumber", "MarksAverage", "Gender", "DateOfBirth", "Phone", "Mobile", "Address", "Cds", "IdAda", },
               smartcampus.service.esse3.data.message.Esse3.Student.class,
               smartcampus.service.esse3.data.message.Esse3.Student.Builder.class);
           internal_static_smartcampus_service_esse3_data_message_Exam_descriptor =
@@ -5310,7 +6313,7 @@ public final class Esse3 {
           internal_static_smartcampus_service_esse3_data_message_StudentExams_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
               internal_static_smartcampus_service_esse3_data_message_StudentExams_descriptor,
-              new java.lang.String[] { "FiscalCode", "Exams", },
+              new java.lang.String[] { "IdAda", "Exams", "Todo", },
               smartcampus.service.esse3.data.message.Esse3.StudentExams.class,
               smartcampus.service.esse3.data.message.Esse3.StudentExams.Builder.class);
           internal_static_smartcampus_service_esse3_data_message_AdLog_descriptor =

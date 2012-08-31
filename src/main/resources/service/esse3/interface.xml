@@ -3,13 +3,15 @@
 
 	<interface serviceURI="smartcampus.service.esse3">
 		<operation name="GetStudentData" storable="true">
-			<parameter name="fiscalCode" type="String"/>
+			<parameter name="idAda" type="String"/>
 			<output type="smartcampus.service.esse3.data.message.Esse3$Student" repeated="false"/>
 		</operation>
 		<operation name="GetStudentExams" storable="true">
-			<parameter name="fiscalCode" type="String"/>
+			<parameter name="idAda" type="String"/>
 			<output type="smartcampus.service.esse3.data.message.Esse3$StudentExams" repeated="false"/>
 		</operation>		
+		
+		<!-- 
 		<operation name="GetAdLogs" storable="true">
 			<parameter name="aaOff" type="String"/>
 			<output type="smartcampus.service.esse3.data.message.Esse3$AdLog" repeated="true"/>
@@ -28,16 +30,19 @@
 			<parameter name="cod" type="String"/>
 			<parameter name="aaOff" type="String"/>
 			<output type="smartcampus.service.esse3.data.message.Esse3$CompleteExam" repeated="false"/>
-		</operation>					
+		</operation>
+		-->					
 	</interface>
 
 	<implementation package="smartcampus.service.esse3">
 		<operationImpl name="GetStudentData"/>
 		<operationImpl name="GetStudentExams"/>
+		<!-- 
 		<operationImpl name="GetAdLogs"/>
 		<operationImpl name="GetExamDescription"/>
 		<operationImpl name="GetExamTeacher"/>
 		<operationImpl name="GetCompleteExam"/>
+		 -->
 	</implementation>
 
 </service-definition>
