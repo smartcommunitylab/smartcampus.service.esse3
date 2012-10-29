@@ -40,12 +40,11 @@ public class ADAConnectionScript {
 		builder.setMarksAverage(notNull((String)map.get("marksAverage")));
 		builder.setCds(notNull((String)map.get("cds")));
 		
-		// fillers : missing
-		builder.setFiscalCode("");
-		builder.setName("");
-		builder.setSurname("");
-		builder.setGender("");
-		builder.setDateOfBirth("");
+		builder.setFiscalCode(notNull((String)map.get("fiscalCode")));
+		builder.setName(notNull((String)map.get("name")));
+		builder.setSurname(notNull((String)map.get("surname")));
+		builder.setGender(notNull((String)map.get("gender")));
+		builder.setDateOfBirth(notNull((String)map.get("dateOfBirth")));
 		
 		builder.setIdAda(idAda);
 		
