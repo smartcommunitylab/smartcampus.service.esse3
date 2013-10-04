@@ -34,6 +34,7 @@ message Student {
 	required string address = 16;
 	required string cds = 17;
 	required string idAda = 18;
+	required string idGiada = 19;
 }
 
 message Exam {

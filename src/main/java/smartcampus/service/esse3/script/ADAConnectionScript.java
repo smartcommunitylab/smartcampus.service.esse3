@@ -60,6 +60,7 @@ public class ADAConnectionScript {
 		builder.setSurname(notNull((String)map.get("surname")));
 		builder.setGender(notNull((String)map.get("gender")));
 		builder.setDateOfBirth(notNull((String)map.get("dateOfBirth")));
+		builder.setIdGiada(notNull((String)map.get("idGiada")));
 		
 		builder.setIdAda(idAda);
 		
