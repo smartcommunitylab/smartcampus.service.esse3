@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2012-2013 Trento RISE Licensed under the Apache License, Version 
+	2.0 (the "License"); you may not use this file except in compliance with 
+	the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 
+	Unless required by applicable law or agreed to in writing, software distributed 
+	under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
+	OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+	the specific language governing permissions and limitations under the License. -->
+<dataflow xmlns="http://www.example.org/mml-schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/mml-schema mml-schema.xsd ">
+
+	<input name="facId" type="String" />
+
+	<variable name="classi" type="String" />
+	<variable name="cds" type="String" />
+	<variable name="pds" type="String" />
+	
+	<variable name="cdsComplete" type="smartcampus.service.esse3.data.message.Esse3.Cds" />
+
+	<variable name="classiList" type="java.util.Collection">
+		<body>new java.util.ArrayList();</body>
+	</variable>
+	<variable name="cdsList" type="java.util.Collection">
+		<body>new java.util.ArrayList();</body>
+	</variable>
+	<variable name="pdsList" type="java.util.Collection">
+		<body>new java.util.ArrayList();</body>
+	</variable>	
+	<variable name="cdsNoPdsList" type="java.util.Collection">
+		<body>new java.util.ArrayList();</body>
+	</variable>
+
+	<httpConnector name="esse3Connector" method="GET"
+		encoding="ISO-8859-1" />
+
+	<connect name="c1" connector="esse3Connector" outputVar="classi"
+		transformer="string">
+		<properties>
+			<property name="url">
+				<value>"http://localhost:8080/smartcampus.vas.portfolio.ada/rest/classi"
+				</value>
+			</property>
+		</properties>
+	</connect>
+
+	<script outputVar="classiList" writeMethod="addAll" writeAction="append">
+		<className>smartcampus.service.esse3.script.Esse3Script</className>
+		<method>getClassi</method>
+		<variables>
+			<value>classi</value>
+		</variables>
+	</script>
+
+	<foreach name="fe1" item="classe" itemClass="java.lang.String"
+		aggregateVariable="cdsList" outputVar="cdsNoPdsList" writeAction="append"
+		writeMethod="addAll">
+		<items>classiList</items>
+
+		<connect name="c2" connector="esse3Connector" outputVar="cds"
+			transformer="string">
+			<properties>
+				<property name="url">
+					<value>"http://localhost:8080/smartcampus.vas.portfolio.ada/rest/cdsfacolta/2013/"
+						+ classe
+					</value>
+				</property>
+			</properties>
+		</connect>
+
+		<script outputVar="cdsList" writeMethod="addAll" writeAction="append">
+			<className>smartcampus.service.esse3.script.Esse3Script</className>
+			<method>getCds</method>
+			<variables>
+				<value>cds</value>
+				<value>facId</value>
+			</variables>
+		</script>
+
+	</foreach>
+
+	<foreach name="fe2" item="cdsMsg"
+		itemClass="smartcampus.service.esse3.data.message.Esse3.Cds"
+		aggregateVariable="cdsComplete" outputVar="output" writeAction="append"
+		writeMethod="addAll">
+		<items>cdsNoPdsList</items>
+
+		<connect name="c2" connector="esse3Connector" outputVar="pds"
+			transformer="string">
+			<properties>
+				<property name="url">
+					<value>"http://localhost:8080/smartcampus.vas.portfolio.ada/rest/pdsord/"
+						+ cdsMsg.getCdsId() + "/" + cdsMsg.getAaOrd()</value>
+				</property>
+			</properties>
+		</connect>
+
+		<script outputVar="pdsList">
+			<className>smartcampus.service.esse3.script.Esse3Script</className>
+			<method>getPds</method>
+			<variables>
+				<value>pds</value>
+			</variables>
+		</script>
+
+		<script outputVar="cdsComplete" writeMethod="add" writeAction="append">
+			<className>smartcampus.service.esse3.script.Esse3Script</className>
+			<method>mergeCdsWithPds</method>
+			<variables>
+				<value>cdsMsg</value>
+				<value>pdsList</value>
+			</variables>
+		</script>		
+		
+	</foreach>
+
+</dataflow>

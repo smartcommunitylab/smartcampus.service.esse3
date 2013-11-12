@@ -1,0 +1,53 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="WS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DataSet" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Row" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="cds_id" minOccurs="0"/>
+                    <xs:element type="xs:string" name="aa_ord_id" minOccurs="0"/>
+                    <xs:element type="xs:string" name="pds_id" minOccurs="0"/>
+                    <xs:element type="xs:string" name="cod" minOccurs="0"/>
+                    <xs:element type="xs:string" name="des" minOccurs="0"/>
+                    <xs:element type="xs:string" name="p06_stati_ord_des" minOccurs="0"/>
+                    <xs:element type="xs:string" name="web_immat_flg" minOccurs="0"/>
+                    <xs:element type="xs:string" name="web_view_flg" minOccurs="0"/>
+                    <xs:element type="xs:string" name="stato_cod" minOccurs="0"/>
+                    <xs:element type="xs:string" name="obbl_flg" minOccurs="0"/>
+                    <xs:element type="xs:string" name="tst_ta_id" minOccurs="0"/>
+                    <xs:element type="xs:string" name="comb_ta_id" minOccurs="0"/>
+                    <xs:element type="xs:string" name="comb_ta_des" minOccurs="0"/>
+                    <xs:element type="xs:string" name="comb_ta_nota" minOccurs="0"/>
+                    <xs:element type="xs:string" name="tipo_titit_cod" minOccurs="0"/>
+                    <xs:element type="xs:string" name="titit_cod" minOccurs="0"/>
+                    <xs:element type="xs:string" name="stato_titolo" minOccurs="0"/>
+                    <xs:element type="xs:string" name="dett_ta_id" minOccurs="0"/>
+                    <xs:element type="xs:string" name="titit_des" minOccurs="0"/>
+                    <xs:element type="xs:string" name="tipi_tit_it_des" minOccurs="0"/>
+                    <xs:element type="xs:string" name="rif_flg" minOccurs="0"/>
+                    <xs:element type="xs:string" name="tipi_tit_it_livello" minOccurs="0"/>
+                    <xs:element type="xs:string" name="stato_richiesto" minOccurs="0"/>
+                    <xs:element type="xs:string" name="voto_min" minOccurs="0"/>
+                    <xs:element type="xs:string" name="comb_ta_des_lin" minOccurs="0"/>
+                    <xs:element type="xs:string" name="comb_ta_nota_des_lin" minOccurs="0"/>
+                    <xs:element type="xs:string" name="abil_cons_sdr_flg" minOccurs="0"/>
+                    <xs:element type="xs:string" name="abil_cons_ate_flg" minOccurs="0"/>
+                    <xs:element type="xs:string" name="tit_univ_flg" minOccurs="0"/>
+                    <xs:element type="xs:string" name="tit_it_id" minOccurs="0"/>
+                    <xs:element type="xs:string" name="tit_stra_id" minOccurs="0"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="Num" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="LocalEntityName" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

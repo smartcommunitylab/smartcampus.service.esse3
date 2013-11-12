@@ -1,0 +1,37 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="WS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DataSet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Row" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="cds_id"/>
+                    <xs:element type="xs:string" name="aa_off_id"/>
+                    <xs:element type="xs:string" name="ad_id"/>
+                    <xs:element type="xs:string" name="aa_ord_id"/>
+                    <xs:element type="xs:string" name="pds_id"/>
+                    <xs:element type="xs:string" name="fat_part_cod"/>
+                    <xs:element type="xs:string" name="dom_part_cod"/>
+                    <xs:element type="xs:string" name="part_cod"/>
+                    <xs:element type="xs:string" name="ad_log_id"/>
+                    <xs:element type="xs:string" name="dom_part_des"/>
+                    <xs:element type="xs:string" name="p06_part_des"/>
+                    <xs:element type="xs:string" name="p06_aa_part_data_inizio"/>
+                    <xs:element type="xs:string" name="p06_aa_part_data_fine"/>
+                    <xs:element type="xs:string" name="p06_aa_part_des"/>
+                    <xs:element type="xs:string" name="p06_aa_part_durata"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="Num" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="LocalEntityName"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

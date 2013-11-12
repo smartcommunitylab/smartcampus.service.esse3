@@ -1,0 +1,39 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="WS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DataSet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Row" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="p09_ad_pdsord_cds_id"/>
+                    <xs:element type="xs:string" name="p09_ad_pdsord_aa_ord_id"/>
+                    <xs:element type="xs:string" name="p09_ad_pdsord_aa_off_id"/>
+                    <xs:element type="xs:string" name="p09_ad_pdsord_pds_id"/>
+                    <xs:element type="xs:string" name="p09_ad_pdsord_ad_id"/>
+                    <xs:element type="xs:string" name="p09_ad_gen_cod"/>
+                    <xs:element type="xs:string" name="ad_gen_des"/>
+                    <xs:element type="xs:string" name="p09_ad_pdsord_peso_ar"/>
+                    <xs:element type="xs:string" name="p09_ad_cds_no_lez_flg"/>
+                    <xs:element type="xs:string" name="p09_ad_cds_cds_mut_id"/>
+                    <xs:element type="xs:string" name="p09_ad_cds_ad_mut_id"/>
+                    <xs:element type="xs:string" name="p09_ad_cds_aa_ord_mut_id"/>
+                    <xs:element type="xs:string" name="p09_ad_cds_pds_mut_id"/>
+                    <xs:element type="xs:string" name="cds_id_log"/>
+                    <xs:element type="xs:string" name="aa_ord_id_log"/>
+                    <xs:element type="xs:string" name="pds_id_log"/>
+                    <xs:element type="xs:string" name="ad_id_log"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="Num" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="LocalEntityName"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,42 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="WS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DataSet" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Row" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="slot_id"/>
+                    <xs:element type="xs:string" name="prg_evento"/>
+                    <xs:element type="xs:string" name="prg_evento_riga"/>
+                    <xs:element type="xs:string" name="des_evento_riga"/>
+                    <xs:element type="xs:string" name="des_partizione"/>
+                    <xs:element type="xs:string" name="des_tipo_att"/>
+                    <xs:element type="xs:string" name="dat_data_imp"/>
+                    <xs:element type="xs:string" name="des_giorno"/>
+                    <xs:element type="xs:string" name="des_persone"/>
+                    <xs:element type="xs:string" name="ora_inizio"/>
+                    <xs:element type="xs:string" name="ora_fine"/>
+                    <xs:element type="xs:string" name="des_rf"/>
+                    <xs:element type="xs:string" name="flg_weekend"/>
+                    <xs:element type="xs:string" name="ext_aa_off_id"/>
+                    <xs:element type="xs:string" name="ext_cds_id"/>
+                    <xs:element type="xs:string" name="ext_pds_id"/>
+                    <xs:element type="xs:string" name="ext_aa_ord_id"/>
+                    <xs:element type="xs:string" name="ext_ad_id"/>
+                    <xs:element type="xs:string" name="ext_fat_part"/>
+                    <xs:element type="xs:string" name="ext_dom_part"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="Num" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="LocalEntityName" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

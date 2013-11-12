@@ -1,0 +1,32 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="WS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DataSet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Row" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="fac_id"/>
+                    <xs:element type="xs:string" name="via"/>
+                    <xs:element type="xs:string" name="citta"/>
+                    <xs:element type="xs:string" name="prov"/>
+                    <xs:element type="xs:string" name="cap"/>
+                    <xs:element type="xs:string" name="cod"/>
+                    <xs:element type="xs:string" name="des"/>
+                    <xs:element type="xs:string" name="web_view_flg"/>
+                    <xs:element type="xs:string" name="url_sito_web"/>
+                    <xs:element type="xs:string" name="email"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="Num" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="LocalEntityName"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

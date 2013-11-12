@@ -1,63 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Copyright 2012-2013 Trento RISE
-  
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-  
-         http://www.apache.org/licenses/LICENSE-2.0
-  
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
--->
-<service-definition xmlns="http://www.example.org/interface-schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/interface-schema ../interface-schema.xsd ">
+<!-- Copyright 2012-2013 Trento RISE Licensed under the Apache License, Version 
+	2.0 (the "License"); you may not use this file except in compliance with 
+	the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 
+	Unless required by applicable law or agreed to in writing, software distributed 
+	under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
+	OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+	the specific language governing permissions and limitations under the License. -->
+<service-definition xmlns="http://www.example.org/interface-schema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/interface-schema ../interface-schema.xsd ">
 
 	<interface serviceURI="smartcampus.service.esse3">
 		<operation name="GetStudentData" storable="true">
-			<parameter name="idAda" type="String"/>
-			<output type="smartcampus.service.esse3.data.message.Esse3$Student" repeated="false"/>
+			<parameter name="idAda" type="String" />
+			<output type="smartcampus.service.esse3.data.message.Esse3$Student"
+				repeated="false" />
 		</operation>
 		<operation name="GetStudentExams" storable="true">
-			<parameter name="idAda" type="String"/>
-			<output type="smartcampus.service.esse3.data.message.Esse3$StudentExams" repeated="false"/>
-		</operation>		
-		
-		<!-- 
-		<operation name="GetAdLogs" storable="true">
-			<parameter name="aaOff" type="String"/>
-			<output type="smartcampus.service.esse3.data.message.Esse3$AdLog" repeated="true"/>
+			<parameter name="idAda" type="String" />
+			<output type="smartcampus.service.esse3.data.message.Esse3$StudentExams"
+				repeated="false" />
 		</operation>
-		<operation name="GetExamDescription" storable="true">
-			<parameter name="cod" type="String"/>
-			<parameter name="aaOff" type="String"/>
-			<output type="smartcampus.service.esse3.data.message.Esse3$ExamDescription" repeated="false"/>
-		</operation>				
-		<operation name="GetExamTeacher" storable="true">
-			<parameter name="cod" type="String"/>
-			<parameter name="aaOff" type="String"/>
-			<output type="smartcampus.service.esse3.data.message.Esse3$ExamTeacher" repeated="false"/>
-		</operation>		
-		<operation name="GetCompleteExam" storable="true">
-			<parameter name="cod" type="String"/>
-			<parameter name="aaOff" type="String"/>
-			<output type="smartcampus.service.esse3.data.message.Esse3$CompleteExam" repeated="false"/>
+		<operation name="GetFacolta" storable="true">
+			<output type="smartcampus.service.esse3.data.message.Esse3$Facolta"
+				repeated="true" />
 		</operation>
-		-->					
+		<operation name="GetCds" storable="true">
+			<parameter name="facId" type="String" />
+			<output type="smartcampus.service.esse3.data.message.Esse3$Cds"
+				repeated="true" />
+		</operation>
+		<operation name="GetPds" storable="true">
+			<parameter name="aaOrd" type="String" />
+			<parameter name="cdsId" type="String" />
+			<output type="smartcampus.service.esse3.data.message.Esse3$Pds"
+				repeated="true" />
+		</operation>
+		<operation name="GetAd" storable="true">
+			<parameter name="aaOff" type="String" />
+			<parameter name="aaOrd" type="String" />
+			<parameter name="cdsId" type="String" />
+			<output type="smartcampus.service.esse3.data.message.Esse3$Ad"
+				repeated="true" />
+		</operation>
+		<operation name="GetOrariAd" storable="true">
+			<parameter name="cdsCod" type="String" />
+			<parameter name="aaOrd" type="String" />
+			<parameter name="aaOff" type="String" />
+			<parameter name="pdsId" type="String" />
+			<parameter name="pdsCod" type="String" />
+			<parameter name="adCod" type="String" />
+			<parameter name="domCod" type="String" />
+			<parameter name="fatCod" type="String" />
+			<output type="smartcampus.service.esse3.data.message.Esse3$Orari"
+				repeated="true" />
+		</operation>
 	</interface>
 
+
 	<implementation package="smartcampus.service.esse3">
-		<operationImpl name="GetStudentData"/>
-		<operationImpl name="GetStudentExams"/>
-		<!-- 
-		<operationImpl name="GetAdLogs"/>
-		<operationImpl name="GetExamDescription"/>
-		<operationImpl name="GetExamTeacher"/>
-		<operationImpl name="GetCompleteExam"/>
-		 -->
+		<operationImpl name="GetStudentData" />
+		<operationImpl name="GetStudentExams" />
+		<operationImpl name="GetFacolta" />
+		<operationImpl name="GetCds" />
+		<operationImpl name="GetPds" />
+		<operationImpl name="GetAd" />
+		<operationImpl name="GetOrariAd" />
+		<!-- <operationImpl name="GetAdLogs"/> <operationImpl name="GetExamDescription"/> 
+			<operationImpl name="GetExamTeacher"/> <operationImpl name="GetCompleteExam"/> -->
 	</implementation>
 
 </service-definition>

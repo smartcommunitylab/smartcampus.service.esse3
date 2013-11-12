@@ -54,24 +54,40 @@ message StudentExams {
 	repeated Exam todo = 3;
 }
 
-message AdLog {
-	required string cod = 1;
-	required string logId = 2;
-	required string year = 3;
+message Facolta {
+	required string facId = 1;
+	required string description = 2;
 }
 
-message ExamDescription {
-	optional string description = 3;
+message Cds {
+	required string cdsId = 1;
+	required string cdsCod = 2;
+	required string facId = 3;
+	required string description = 4;
+	required string durata = 5;
+	required string aaOrd = 6;
+	repeated Pds pds = 7;
 }
 
-message ExamTeacher {
-	optional string name = 3;
-	optional string surname = 4;
+message Pds {
+	required string pdsId = 1;
+	required string pdsCod = 2;
 }
 
-message CompleteExam {
-	required string cod = 1;
-	required string aaOff = 2;
-	required ExamDescription description = 3;
-	required ExamTeacher teacher = 4;
+message Ad {
+	required string adId = 1;
+	required string adcod = 2;
+	required string description = 3;
+	repeated string fatPart = 4;
+	repeated string domPart = 5;
 }
+
+message Orari {
+	required string type = 1;
+	required string date = 2;
+	required string from = 3;
+	required string to = 4;
+	required string room = 5;
+	required string teacher = 6;
+}
+

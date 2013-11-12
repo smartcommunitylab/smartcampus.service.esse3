@@ -43,6 +43,7 @@
 			<plugin>
 				<groupId>org.apache.felix</groupId>
 				<artifactId>maven-bundle-plugin</artifactId>
+				<version>2.3.7</version>				
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
@@ -115,6 +116,88 @@
 										<runnableAfterDelay>true</runnableAfterDelay>
 									</statusParameters>
 								</method>
+								
+								<method>
+									<methodName>GetFacolta</methodName>
+									<statusParameters>
+										<storable>true</storable>
+										<automaticRefresh>true</automaticRefresh>
+										<delay>#{1000L*15}</delay>
+										<period>#{1000L*60*60*24*7}</period>
+										<periodOnDefault>#{1000L*60*60*24*30}</periodOnDefault>
+										<periodOnFailure>#{1000L*60*60*24*30}</periodOnFailure>
+										<cacheValidityPeriod>#{1000L*60*60*24*60}</cacheValidityPeriod>
+										<validityPeriod>#{1000L*60*60*24*30}</validityPeriod>
+										<serviceBlocked>false</serviceBlocked>
+										<dataFlowInvokable>true</dataFlowInvokable>
+										<runnableAfterDelay>true</runnableAfterDelay>
+									</statusParameters>
+								</method>	
+								<method>
+									<methodName>GetCds</methodName>
+									<statusParameters>
+										<storable>true</storable>
+										<automaticRefresh>true</automaticRefresh>
+										<delay>#{1000L*15}</delay>
+										<period>#{1000L*60*60*24*7}</period>
+										<periodOnDefault>#{1000L*60*60*24*30}</periodOnDefault>
+										<periodOnFailure>#{1000L*60*60*24*30}</periodOnFailure>
+										<cacheValidityPeriod>#{1000L*60*60*24*60}</cacheValidityPeriod>
+										<validityPeriod>#{1000L*60*60*24*30}</validityPeriod>
+										<serviceBlocked>false</serviceBlocked>
+										<dataFlowInvokable>true</dataFlowInvokable>
+										<runnableAfterDelay>true</runnableAfterDelay>
+									</statusParameters>
+								</method>		
+								<method>
+									<methodName>GetPds</methodName>
+									<statusParameters>
+										<storable>true</storable>
+										<automaticRefresh>true</automaticRefresh>
+										<delay>#{1000L*15}</delay>
+										<period>#{1000L*60*60*24*7}</period>
+										<periodOnDefault>#{1000L*60*60*24*30}</periodOnDefault>
+										<periodOnFailure>#{1000L*60*60*24*30}</periodOnFailure>
+										<cacheValidityPeriod>#{1000L*60*60*24*60}</cacheValidityPeriod>
+										<validityPeriod>#{1000L*60*60*24*30}</validityPeriod>
+										<serviceBlocked>false</serviceBlocked>
+										<dataFlowInvokable>true</dataFlowInvokable>
+										<runnableAfterDelay>true</runnableAfterDelay>
+									</statusParameters>
+								</method>
+								<method>
+									<methodName>GetAd</methodName>
+									<statusParameters>
+										<storable>true</storable>
+										<automaticRefresh>true</automaticRefresh>
+										<delay>#{1000L*15}</delay>
+										<period>#{1000L*60*60*24*7}</period>
+										<periodOnDefault>#{1000L*60*60*24*30}</periodOnDefault>
+										<periodOnFailure>#{1000L*60*60*24*30}</periodOnFailure>
+										<cacheValidityPeriod>#{1000L*60*60*24*60}</cacheValidityPeriod>
+										<validityPeriod>#{1000L*60*60*24*30}</validityPeriod>
+										<serviceBlocked>false</serviceBlocked>
+										<dataFlowInvokable>true</dataFlowInvokable>
+										<runnableAfterDelay>true</runnableAfterDelay>
+									</statusParameters>
+								</method>
+								<method>
+									<methodName>GetOrariAd</methodName>
+									<statusParameters>
+										<storable>true</storable>
+										<automaticRefresh>true</automaticRefresh>
+										<delay>#{1000L*15}</delay>
+										<period>#{1000L*60*60*24*7}</period>
+										<periodOnDefault>#{1000L*60*60*24*30}</periodOnDefault>
+										<periodOnFailure>#{1000L*60*60*24*30}</periodOnFailure>
+										<cacheValidityPeriod>#{1000L*60*60*24*60}</cacheValidityPeriod>
+										<validityPeriod>#{1000L*60*60*24*30}</validityPeriod>
+										<serviceBlocked>false</serviceBlocked>
+										<dataFlowInvokable>true</dataFlowInvokable>
+										<runnableAfterDelay>true</runnableAfterDelay>
+									</statusParameters>
+								</method>																																									
+								
 							</methods>
 						</service>
 					</services>

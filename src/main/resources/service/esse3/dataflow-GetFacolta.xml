@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright 2012-2013 Trento RISE
+  
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+  
+         http://www.apache.org/licenses/LICENSE-2.0
+  
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<dataflow xmlns="http://www.example.org/mml-schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/mml-schema mml-schema.xsd ">
+
+	<variable name="facolta" type="String" />
+
+	<httpConnector name="esse3Connector" method="GET" encoding="ISO-8859-1"/>
+
+	<connect name="c1" connector="esse3Connector" outputVar="facolta" transformer="string">
+		<properties>
+			<property name="url">
+				<value>"http://localhost:8080/smartcampus.vas.portfolio.ada/rest/facolta"</value>
+			</property>
+		</properties>
+	</connect>
+
+	<script outputVar="output">
+		<className>smartcampus.service.esse3.script.Esse3Script</className>
+		<method>getFacolta</method>
+		<variables>
+			<value>facolta</value>
+		</variables>
+	</script>
+
+
+</dataflow>

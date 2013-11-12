@@ -1,0 +1,61 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="WS">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="DataSet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Row" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="fac_id"/>
+                    <xs:element type="xs:string" name="p06_cds_cod"/>
+                    <xs:element type="xs:string" name="p06_cds_des"/>
+                    <xs:element type="xs:string" name="p06_cds_rif_flg"/>
+                    <xs:element type="xs:string" name="tipi_corso_tipo_corso_des"/>
+                    <xs:element type="xs:string" name="p06_cds_tipo_corso_cod"/>
+                    <xs:element type="xs:string" name="cds_id"/>
+                    <xs:element type="xs:string" name="p06_cdsord_aa_ord_id"/>
+                    <xs:element type="xs:string" name="num_lingue"/>
+                    <xs:element type="xs:string" name="p06_cds_sett_flg"/>
+                    <xs:element type="xs:string" name="cla_m_id"/>
+                    <xs:element type="xs:string" name="cla_murst_cod"/>
+                    <xs:element type="xs:string" name="p07_cla_murst_cla_murst_des"/>
+                    <xs:element type="xs:string" name="test_flg"/>
+                    <xs:element type="xs:string" name="num_posti_tot"/>
+                    <xs:element type="xs:string" name="p06_cds_um_peso_cod"/>
+                    <xs:element type="xs:string" name="p06_cds_tipo_spec_cod"/>
+                    <xs:element type="xs:string" name="des_tipi_scuole_spec"/>
+                    <xs:element type="xs:string" name="p06_cdsord_valore_min"/>
+                    <xs:element type="xs:string" name="p06_cds_posti_stat_flg"/>
+                    <xs:element type="xs:string" name="durata_anni"/>
+                    <xs:element type="xs:string" name="um_durata"/>
+                    <xs:element type="xs:string" name="durata_effettiva"/>
+                    <xs:element type="xs:string" name="p06_cds_web_view_flg"/>
+                    <xs:element type="xs:string" name="p06_cds_web_immat_flg"/>
+                    <xs:element type="xs:string" name="p07_cla_ateneo_cod"/>
+                    <xs:element type="xs:string" name="p06_cds_tipo_titit_cod"/>
+                    <xs:element type="xs:string" name="p06_cds_ds_tipo_tit_des"/>
+                    <xs:element type="xs:string" name="aa_att_id"/>
+                    <xs:element type="xs:string" name="istat_cod"/>
+                    <xs:element type="xs:string" name="ciclo_istituito_flg"/>
+                    <xs:element type="xs:string" name="p06_cdsord_stato_cod"/>
+                    <xs:element type="xs:string" name="p06_cdsord_aa_ord_cess_id"/>
+                    <xs:element type="xs:string" name="p06_cdsord_data_var"/>
+                    <xs:element type="xs:anyURI" name="url_sito_web"/>
+                    <xs:element type="xs:string" name="url_info_web"/>
+                    <xs:element type="xs:string" name="p06_cds_norm_id"/>
+                    <xs:element type="xs:string" name="p07_normativa_norm_cod"/>
+                    <xs:element type="xs:string" name="p07_normativa_des"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="Num" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="LocalEntityName"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
