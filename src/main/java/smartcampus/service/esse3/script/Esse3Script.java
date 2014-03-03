@@ -2,6 +2,9 @@ package smartcampus.service.esse3.script;
 
 import java.io.StringReader;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
@@ -12,8 +15,11 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Unmarshaller;
 
+import org.codehaus.jackson.map.ObjectMapper;
+
 import smartcampus.service.esse3.data.message.Esse3;
 import smartcampus.service.esse3.data.message.Esse3.Ad;
+import smartcampus.service.esse3.data.message.Esse3.CalendarCds;
 import smartcampus.service.esse3.data.message.Esse3.Cds;
 import smartcampus.service.esse3.data.message.Esse3.Facolta;
 import smartcampus.service.esse3.data.message.Esse3.Orari;
@@ -211,6 +217,60 @@ public class Esse3Script {
 		return result;
 	}	
 	
+	public List<Message> getCalendarAD(String json) throws Exception {
+		List<Message> result = new ArrayList<Message>();
+		
+		ObjectMapper mapper = new ObjectMapper();
+		Map<String, Object> data = (Map<String, Object>)mapper.readValue(json, Map.class);
+		List<Map<String, Object>> events = (List<Map<String, Object>>)data.get("Eventi");
+		
+		for (Map<String, Object> event: events) {
+			CalendarCds.Builder builder = CalendarCds.newBuilder();
+			builder.setId((String)event.get("id"));
+			builder.setFrom(Long.parseLong((String)event.get("start")) * 1000);
+			builder.setTo(Long.parseLong((String)event.get("end")) * 1000);
+		 String title[] = ((String)event.get("title")).split("\n");
+		 builder.setTitle(title[0]);
+		 builder.setTeacher(title[1]);
+		 builder.setType(title[2].replaceAll("[\\(\\)]", ""));
+		 builder.setRoom(title[3].replaceAll("[\\[\\]]", ""));
+		 result.add(builder.build());
+		}
+
+		return result;
+	}
+	
+	public String getCalendarURL(String cds, String year) {
+		String from = getFirstWeekDay();
+		String to = getLastWeekDay();
+		String result = "http://webapps.unitn.it/Orari/it/Web/AjaxEventi/c/" + cds + "-" + year + "/agendaWeek?start=" + from + "&end=" + to;
+		return result;
+	}
+	
+	private String getFirstWeekDay() {
+		Calendar cal = new GregorianCalendar();
+		cal.setTime(new Date(System.currentTimeMillis()));
+		cal.set(Calendar.HOUR_OF_DAY, 0);
+		cal.set(Calendar.MINUTE, 0);
+		cal.set(Calendar.SECOND, 1);
+		cal.set(Calendar.MILLISECOND, 0);
+		cal.set(Calendar.DAY_OF_WEEK, Calendar.MONDAY);
+		String time = "" + cal.getTimeInMillis(); 
+		return time.substring(0, time.length() - 3);
+	}
+	
+	private String getLastWeekDay() {
+		Calendar cal = new GregorianCalendar();
+		cal.setTime(new Date(System.currentTimeMillis()));
+		cal.set(Calendar.HOUR_OF_DAY, 23);
+		cal.set(Calendar.MINUTE, 59);
+		cal.set(Calendar.SECOND, 59);
+		cal.set(Calendar.MILLISECOND, 0);
+		cal.set(Calendar.DAY_OF_WEEK, 1);
+		cal.roll(Calendar.DAY_OF_WEEK, 6);
+		String time = "" + cal.getTimeInMillis(); 
+		return time.substring(0, time.length() - 3);
+	}	
 	
 
 }

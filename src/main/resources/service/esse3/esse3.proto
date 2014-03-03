@@ -91,3 +91,13 @@ message Orari {
 	required string teacher = 6;
 }
 
+message CalendarCds {
+	required string id = 1;
+	required string title = 2;
+	required string teacher = 3;
+	required string room = 4;
+	required int64 from = 5;
+	required int64 to = 6;
+	required string type = 7;
+}
+
