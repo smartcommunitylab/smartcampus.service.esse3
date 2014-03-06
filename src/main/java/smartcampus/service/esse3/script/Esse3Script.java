@@ -25,6 +25,8 @@ import smartcampus.service.esse3.data.message.Esse3.Facolta;
 import smartcampus.service.esse3.data.message.Esse3.Orari;
 import smartcampus.service.esse3.data.message.Esse3.Pds;
 
+import bsh.ParseException;
+
 import com.google.protobuf.Message;
 
 public class Esse3Script {
@@ -217,6 +219,22 @@ public class Esse3Script {
 		return result;
 	}	
 	
+	public List<String> getCalendarURLs(String json) throws Exception {
+		List<String> result = new ArrayList<String>();
+		
+		ObjectMapper mapper = new ObjectMapper();
+		Map<String, Object> data = (Map<String, Object>)mapper.readValue(json, Map.class);
+		List<Map<String, Object>> activities = (List<Map<String, Object>>)data.get("Attivita");
+		
+		for (Map<String, Object> activity: activities) {
+			String id = activity.get("IdADfisica").toString();
+			String url = getDetailURL(id);
+			result.add(url);
+		}
+		
+		return result;
+	}
+	
 	public List<Message> getCalendarAD(String json) throws Exception {
 		List<Message> result = new ArrayList<Message>();
 		
@@ -230,10 +248,20 @@ public class Esse3Script {
 			builder.setFrom(Long.parseLong((String)event.get("start")) * 1000);
 			builder.setTo(Long.parseLong((String)event.get("end")) * 1000);
 		 String title[] = ((String)event.get("title")).split("\n");
+
+		 if (title.length == 4) {
 		 builder.setTitle(title[0]);
 		 builder.setTeacher(title[1]);
 		 builder.setType(title[2].replaceAll("[\\(\\)]", ""));
 		 builder.setRoom(title[3].replaceAll("[\\[\\]]", ""));
+		 } else if (title.length == 5) {
+			 builder.setTitle(title[0] + " " + title[1]);
+			 builder.setTeacher(title[2]);
+			 builder.setType(title[3].replaceAll("[\\(\\)]", ""));
+			 builder.setRoom(title[4].replaceAll("[\\[\\]]", ""));			 
+		 } else {
+			 throw new ParseException("Error parsing event: " + event.get("title"));
+		 }
 		 result.add(builder.build());
 		}
 
@@ -246,6 +274,14 @@ public class Esse3Script {
 		String result = "http://webapps.unitn.it/Orari/it/Web/AjaxEventi/c/" + cds + "-" + year + "/agendaWeek?start=" + from + "&end=" + to;
 		return result;
 	}
+	
+	public String getDetailURL(String id) {
+		String from = getFirstWeekDay();
+		String to = getLastWeekDay();
+		String result = "http://webapps.unitn.it/Orari/it/Web/AjaxEventi/det/" + id + "?start=" + from + "&end=" + to;
+		return result;
+	}	
+	
 	
 	private String getFirstWeekDay() {
 		Calendar cal = new GregorianCalendar();

@@ -1,29 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Copyright 2012-2013 Trento RISE
-  
-     Licensed under the Apache License, Version 2.0 (the "License");
-     you may not use this file except in compliance with the License.
-     You may obtain a copy of the License at
-  
-         http://www.apache.org/licenses/LICENSE-2.0
-  
-     Unless required by applicable law or agreed to in writing, software
-     distributed under the License is distributed on an "AS IS" BASIS,
-     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-     See the License for the specific language governing permissions and
-     limitations under the License.
--->
-<dataflow xmlns="http://www.example.org/mml-schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/mml-schema mml-schema.xsd ">
+<!-- Copyright 2012-2013 Trento RISE Licensed under the Apache License, Version 
+	2.0 (the "License"); you may not use this file except in compliance with 
+	the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 
+	Unless required by applicable law or agreed to in writing, software distributed 
+	under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES 
+	OR CONDITIONS OF ANY KIND, either express or implied. See the License for 
+	the specific language governing permissions and limitations under the License. -->
+<dataflow xmlns="http://www.example.org/mml-schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.example.org/mml-schema mml-schema.xsd ">
 
 	<input name="cdsId" type="String" />
 	<input name="anno" type="String" />
-	
+
+	<variable name="eventsUrls" type="java.util.List" />
 	<variable name="url" type="String" />
 	<variable name="orari" type="String" />
+	<variable name="detail" type="String" />
 
-	<httpConnector name="connector" method="GET" encoding="ISO-8859-1"/>
-	
+	<httpConnector name="connector" method="GET" encoding="ISO-8859-1" />
+
 	<script outputVar="url">
 		<className>smartcampus.service.esse3.script.Esse3Script</className>
 		<method>getCalendarURL</method>
@@ -31,9 +26,10 @@
 			<value>cdsId</value>
 			<value>anno</value>
 		</variables>
-	</script>	
-	
-	<connect name="c1" connector="connector" outputVar="orari" transformer="string">
+	</script>
+
+	<connect name="c1" connector="connector" outputVar="orari"
+		transformer="string">
 		<properties>
 			<property name="url">
 				<value>url</value>
@@ -41,13 +37,40 @@
 		</properties>
 	</connect>
 
-	<script outputVar="output">
+	<script outputVar="eventsUrls">
 		<className>smartcampus.service.esse3.script.Esse3Script</className>
-		<method>getCalendarAD</method>
+		<method>getCalendarURLs</method>
 		<variables>
 			<value>orari</value>
 		</variables>
 	</script>
+
+	<foreach name="fe1" item="eventUrl" itemClass="String"
+		aggregateVariable="evs" outputVar="output" writeAction="append" writeMethod="addAll">
+		<items>eventsUrls</items>
+
+		<connect name="c2" connector="connector" outputVar="detail"
+			transformer="string">
+			<properties>
+				<property name="url">
+					<value>eventUrl</value>
+				</property>
+			</properties>
+		</connect>
+
+		<script outputVar="evs" onError="continue" writeAction="append" 	writeMethod="addAll">
+			<className>smartcampus.service.esse3.script.Esse3Script</className>
+			<method>getCalendarAD</method>
+			<variables>
+				<value>detail</value>
+			</variables>
+		</script>
+
+	</foreach>
+
+
+
+
 
 
 </dataflow>
