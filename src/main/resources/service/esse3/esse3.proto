@@ -101,3 +101,21 @@ message CalendarCds {
 	required string type = 7;
 }
 
+message ADCalendarTable {
+	repeated string data = 1;
+	repeated string ora = 2;
+	repeated string tipologia = 3;
+	repeated string descrizione = 4;
+	repeated Docenti docenti = 5;
+	repeated Luogo luogo = 6;
+}
+
+message Docenti {
+	repeated string docente = 1;
+}
+
+message Luogo {
+	repeated string aula = 6;
+	repeated string edificio = 7;
+}
+

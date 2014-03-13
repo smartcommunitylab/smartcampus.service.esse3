@@ -212,7 +212,41 @@
 										<dataFlowInvokable>true</dataFlowInvokable>
 										<runnableAfterDelay>true</runnableAfterDelay>
 									</statusParameters>
-								</method>																																																			
+								</method>		
+								
+								<method>
+									<methodName>GetCalendarioCompletoCds</methodName>
+									<statusParameters>
+										<storable>true</storable>
+										<automaticRefresh>true</automaticRefresh>
+										<delay>#{1000L*15}</delay>
+										<period>#{1000L*60*60*24}</period>
+										<periodOnDefault>#{1000L*60*60*24}</periodOnDefault>
+										<periodOnFailure>#{1000L*60*60*24}</periodOnFailure>
+										<cacheValidityPeriod>#{1000L*60*60*24*60}</cacheValidityPeriod>
+										<validityPeriod>#{1000L*60*60*24*30}</validityPeriod>
+										<serviceBlocked>false</serviceBlocked>
+										<dataFlowInvokable>true</dataFlowInvokable>
+										<runnableAfterDelay>true</runnableAfterDelay>
+									</statusParameters>
+								</method>									
+								<method>
+									<methodName>GetCalendarioCompletoAd</methodName>
+									<statusParameters>
+										<storable>true</storable>
+										<automaticRefresh>true</automaticRefresh>
+										<delay>#{1000L*15}</delay>
+										<period>#{1000L*60*60*24}</period>
+										<periodOnDefault>#{1000L*60*60*24}</periodOnDefault>
+										<periodOnFailure>#{1000L*60*60*24}</periodOnFailure>
+										<cacheValidityPeriod>#{1000L*60*60*24*60}</cacheValidityPeriod>
+										<validityPeriod>#{1000L*60*60*24*30}</validityPeriod>
+										<serviceBlocked>false</serviceBlocked>
+										<dataFlowInvokable>true</dataFlowInvokable>
+										<runnableAfterDelay>true</runnableAfterDelay>
+									</statusParameters>
+								</method>													
+																																																									
 								
 							</methods>
 						</service>

@@ -20,7 +20,7 @@
 	<httpConnector name="connector" method="GET" encoding="ISO-8859-1" />
 
 	<script outputVar="url">
-		<className>smartcampus.service.esse3.script.Esse3Script</className>
+		<className>smartcampus.service.esse3.script.WebCalendarScript</className>
 		<method>getCalendarURL</method>
 		<variables>
 			<value>cdsId</value>
@@ -38,7 +38,7 @@
 	</connect>
 
 	<script outputVar="eventsUrls">
-		<className>smartcampus.service.esse3.script.Esse3Script</className>
+		<className>smartcampus.service.esse3.script.WebCalendarScript</className>
 		<method>getCalendarURLs</method>
 		<variables>
 			<value>orari</value>
@@ -59,7 +59,7 @@
 		</connect>
 
 		<script outputVar="evs" onError="continue" writeAction="append" 	writeMethod="addAll">
-			<className>smartcampus.service.esse3.script.Esse3Script</className>
+			<className>smartcampus.service.esse3.script.WebCalendarScript</className>
 			<method>getCalendarAD</method>
 			<variables>
 				<value>detail</value>

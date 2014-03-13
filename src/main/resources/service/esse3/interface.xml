@@ -61,6 +61,17 @@
 			<output type="smartcampus.service.esse3.data.message.Esse3$CalendarCds"
 				repeated="true" />
 		</operation>		
+		<operation name="GetCalendarioCompletoCds" storable="true">
+			<parameter name="cdsId" type="String" />
+			<parameter name="anno" type="String" />
+			<output type="smartcampus.service.esse3.data.message.Esse3$CalendarCds"
+				repeated="true" />
+		</operation>
+		<operation name="GetCalendarioCompletoAd" storable="true">
+			<parameter name="adId" type="String" />
+			<output type="smartcampus.service.esse3.data.message.Esse3$CalendarCds"
+				repeated="true" />
+		</operation>		
 	</interface>
 
 
@@ -73,6 +84,8 @@
 		<operationImpl name="GetAd" />
 		<operationImpl name="GetOrariAd" />
 		<operationImpl name="GetCalendarioCds" />
+		<operationImpl name="GetCalendarioCompletoCds" />
+		<operationImpl name="GetCalendarioCompletoAd" />
 		<!-- <operationImpl name="GetAdLogs"/> <operationImpl name="GetExamDescription"/> 
 			<operationImpl name="GetExamTeacher"/> <operationImpl name="GetCompleteExam"/> -->
 	</implementation>

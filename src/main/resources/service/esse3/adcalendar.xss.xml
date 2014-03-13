@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xss:definition main="adcalendar" name="adcalendar" namespace="http://tempuri.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:xss="http://www.sayservice.it/xss" xmlns="http://www.sayservice.it/html">
+
+	<xss:template name="adcalendar">
+		<html xss:anyAttrs="true">
+			<xss:path path="//*[@id='content-area']/div[3]/table/tbody">
+				<tbody>
+					<xss:repeat>
+						<xss:choice>
+							<tr class="impegno scaduto " xss:anyContent="true" />
+							<tr xss:anyAttrs="true">
+								<td xss:anyAttrs="true">
+									<xss:anyText label="data" />
+								</td>
+								<td xss:anyAttrs="true">
+									<xss:anyText label="ora" />
+								</td>
+								<td xss:anyAttrs="true">
+									<xss:anyText label="tipologia" />
+								</td>
+								<td xss:anyAttrs="true" xss:anyContent="true">
+									<xss:anyText />
+									<xss:optional>
+										<br />
+									</xss:optional>
+									<xss:anyText />
+									<xss:finally>
+										<xss:copy label="descrizione" query="./node()" />
+									</xss:finally>
+								</td>
+								<td xss:anyAttrs="true">
+									<xss:repeat label="docenti">
+										<span xss:anyAttrs="true">
+											<a xss:anyAttrs="true">
+												<xss:anyText label="docente" />
+											</a>
+										</span>
+										<xss:optional>
+											<br />
+										</xss:optional>
+									</xss:repeat>
+								</td>
+								<td xss:anyAttrs="true">
+									<xss:repeat label="luogo">
+										<xss:anyText label="aula" />
+										<xss:optional>
+											<br />
+										</xss:optional>
+										<xss:anyText label="edificio" />
+										<xss:optional>
+											<br />
+										</xss:optional>
+									</xss:repeat>
+								</td>
+							</tr>
+						</xss:choice>
+					</xss:repeat>
+				</tbody>
+			</xss:path>
+		</html>
+	</xss:template>
+
+	<!-- <xss:template name="getCell"> <span xss:anyAttrs="true"> <a xss:anyAttrs="true"> <xss:anyText label="docenti"> </xss:anyText> </a> </span> <xss:optional> <br 
+		/> </xss:optional> </xss:template> -->
+
+	<!-- <xss:template name="space"> <xss:create label="docenti" value=" " /> </xss:template> -->
+
+
+
+
+
+</xss:definition>
